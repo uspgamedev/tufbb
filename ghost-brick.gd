@@ -77,17 +77,17 @@ func aparece ():
 	color_change(Color(0, 0, 0, 1), Color(1, 1, 1, 1), 1)
 
 func color_change (before, after, t):
-	var tween = get_node("Tween")
+	var tween = get_node("../Tween")
 	var sprite = get_node("ghost-brick")
 
-	get_node("/root/SceneRoot/color/color_from").set_color(before)
-	get_node("/root/SceneRoot/color/color_from").connect("color_changed", self, "on_color_changed")
+	get_node("../color/color_from").set_color(before)
+	get_node("../color/color_from").connect("color_changed", self, "on_color_changed")
 	
-	get_node("/root/SceneRoot/color/color_to").set_color(after)
-	get_node("/root/SceneRoot/color/color_to").connect("color_changed", self, "on_color_changed")
+	get_node("../color/color_to").set_color(after)
+	get_node("../color/color_to").connect("color_changed", self, "on_color_changed")
 	
-	var color_from = get_node("/root/SceneRoot/color/color_from").get_color()
-	var color_to = get_node("/root/SceneRoot/color/color_to").get_color()
+	var color_from = get_node("../color/color_from").get_color()
+	var color_to = get_node("../color/color_to").get_color()
 	
 	tween.interpolate_method(sprite, "set_modulate", color_from, color_to, t, state.trans, state.eases)
 	

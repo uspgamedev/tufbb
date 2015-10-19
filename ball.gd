@@ -37,10 +37,9 @@ func _ready():
 		placar.store_32(score)
 	placar.close()
 	
-	var label = get_node("/root/SceneRoot/label")
+	var label = get_node("../Label")
 	placar.close()
 	label.set_text(str("Score: ", score))
-
 	
 func _fixed_process(delta):
 	var rect = get_viewport().get_rect()
@@ -65,20 +64,20 @@ func _fixed_process(delta):
 		get_tree().change_scene("res://gameover.xscn")
 	
 func _colide_com_brick (body):
-	var tween = get_node ("/root/SceneRoot/Tween")
+	var tween = get_node ("../Tween")
 	
 	#muda a cor da bola na colisao:
 	
 	var sprite = get_node("ball")
 	
-	get_node("/root/SceneRoot/color/color_from").set_color(Color(1, 1, 1, 1))
-	get_node("/root/SceneRoot/color/color_from").connect("color_changed", self, "on_color_changed")
+	get_node("../color/color_from").set_color(Color(1, 1, 1, 1))
+	get_node("../color/color_from").connect("color_changed", self, "on_color_changed")
 	
-	get_node("/root/SceneRoot/color/color_to").set_color(Color(5, 5, 5, 1))
-	get_node("/root/SceneRoot/color/color_to").connect("color_changed", self, "on_color_changed")
+	get_node("../color/color_to").set_color(Color(5, 5, 5, 1))
+	get_node("../color/color_to").connect("color_changed", self, "on_color_changed")
 	
-	var color_from = get_node("/root/SceneRoot/color/color_from").get_color()
-	var color_to = get_node("/root/SceneRoot/color/color_to").get_color()
+	var color_from = get_node("../color/color_from").get_color()
+	var color_to = get_node("../color/color_to").get_color()
 	
 	tween.interpolate_method(sprite, "set_modulate", color_from, color_to, 0, state.trans, state.eases)
 	tween.interpolate_property(sprite, "modulate", color_to, color_from, 0.5, state.trans, state.eases, 0)
@@ -106,7 +105,7 @@ func _colide_com_brick (body):
 	
 func _colide_com_barra(body):
 	var coef = 10
-	var bar = get_node("/root/SceneRoot/bar")
+	var bar = get_node("../bar")
 	var vel = get_linear_velocity()
 	if (baixo < bar.baixo):
 		if (body.get_type() == "KinematicBody2D"):

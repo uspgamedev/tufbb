@@ -147,9 +147,9 @@
 				<string> "playback/active" </string>
 				<string> "playback/repeat" </string>
 				<string> "playback/speed" </string>
-				<string> "_colide_com_brick" </string>
-				<string> "body_enter" </string>
 				<string> "_colide_com_barra" </string>
+				<string> "body_enter" </string>
+				<string> "_colide_com_brick" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 16 </int>
@@ -161,7 +161,7 @@
 				<resource  resource_type="Script" path="res://main.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -284,14 +284,13 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 3 </int>
 							<string> "sources" </string>
-							<array  len="5" shared="false">
+							<array  len="4" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://label.gd" </string>
 								<string> "res://bar.gd" </string>
-								<string> "res://moving-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
