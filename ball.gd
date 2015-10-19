@@ -35,9 +35,10 @@ func _ready():
 		placar.open(file_name, File.WRITE)
 		score = 0
 		placar.store_32(score)
+	placar.close()
+	
 	var label = get_node("/root/SceneRoot/label")
 	placar.close()
-	print("Score : ", score)
 	label.set_text(str("Score: ", score))
 
 	
@@ -57,14 +58,10 @@ func _fixed_process(delta):
 	baixo = posicao.y + tamanho.y/2
 	
 	if (cima > rect.end.y):
-		placar.open(file_name, File.READ_WRITE)
-		if placar.is_open():
-			my_score = placar.get_32()
-			if (!my_score):
-				my_score = 0
-			score = my_score - 1
-			placar.store_32(score)
-			placar.close()
+		placar.open(file_name, File.WRITE)
+		score -= 1
+		placar.store_32(score)
+		placar.close()
 		get_tree().change_scene("res://gameover.xscn")
 	
 func _colide_com_brick (body):
@@ -98,16 +95,10 @@ func _colide_com_brick (body):
 		
 		#precisamos mudar essa condicao:
 		if (cont == 103):
-			placar.open(file_name, File.READ)
-			if placar.is_open():
-				my_score = placar.get_32()
-				if (!my_score):
-					my_score = 0
-				score = my_score + 1
-				placar.close()
-				placar.open(file_name, File.WRITE)
-				placar.store_32(score)
-				placar.close()
+			placar.open(file_name, File.WRITE)
+			score += 1
+			placar.store_32(score)
+			placar.close()
 			get_tree().change_scene("res://youwin.xscn")
 	
 	tween.set_repeat(false)
