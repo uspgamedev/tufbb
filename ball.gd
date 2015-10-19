@@ -93,7 +93,8 @@ func _colide_com_brick (body):
 		body.hurt()
 		
 		#precisamos mudar essa condicao:
-		if (cont == 103):
+		#stage 1: cont == 103
+		if (cont == 6):
 			placar.open(file_name, File.WRITE)
 			score += 1
 			placar.store_32(score)

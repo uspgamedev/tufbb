@@ -63,11 +63,13 @@ func aparece ():
 	set_layer_mask(1)
 	set_collision_mask(1)
 	
-	var linha = 40 + randi() % 701
+	#stage 1: coluna = 340
+	var linha = 60 + randi() % 701
+	var coluna = 30 + randi() % 301
 	
 	var tween = get_node("Tween")
 	var random = randi() % 2
-	var vector = [Vector2(linha, 40), Vector2(linha, 340)]
+	var vector = [Vector2(linha, 40), Vector2(linha, coluna)]
 	
 	tween.interpolate_method(self, "set_pos", self.get_pos(), vector[random], 0.00001, state.trans, state.eases)
 	
