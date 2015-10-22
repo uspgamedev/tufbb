@@ -1,26 +1,22 @@
 
 extends Node
 
+var bricks
+
 func _ready():
 	set_fixed_process(true)
+	var brick1 = get_node("../").get_tree().get_nodes_in_group("brick_1hit").size()
+	var brick2 = get_node("../").get_tree().get_nodes_in_group("brick_2hit").size()
+	var brick3 = get_node("../").get_tree().get_nodes_in_group("brick_3hit").size()
 	
-	#print(self.get_children())
+	bricks = brick1 + 2*brick2 + 3*brick3
+	bricks = 100
+	print("Main bricks: ", bricks)
 	
-	#green - [Node:552]
-	#yellow - [Node:643]
-	#red - [Node:710]
-	#moving - [Node:735]
-	#tween - [RigidBody2D:742]
-	
-	#numero de bricks = 62
-	#cada brick: 3 filhos (sprite, hitbox, tween)
-	#62 * 3 = 186
-	
-	#cada cena: 1 SceneRoot
-	#4 cenas: 186 + 4 = 190
-	
-	#(742 - 552) = 190 
-
 func _fixed_process(delta):
 	if(Input.is_action_pressed("ui_cancel")):
 		get_tree().quit()
+	print("Bricks: ", bricks)
+		
+func brickHasDied():
+	bricks -= 1

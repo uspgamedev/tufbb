@@ -11,6 +11,7 @@ var cont = 0
 
 func _ready():
 	set_fixed_process(true)
+	add_to_group("brick_2hit")
 	
 	var tween = get_node("Tween")
 	var posicao = get_pos()

@@ -11,8 +11,10 @@ var state = {
 }
 var cont = 0
 
+
 func _ready():
 	set_fixed_process (true)
+	add_to_group("brick_2hit")
 	
 	#falling level:
 	
@@ -36,6 +38,7 @@ func _fixed_process (delta):
 	if (life <= 0):
 		cont += 1
 		if (cont == 30):
+			get_node("/root/SceneRoot/Default").brickHasDied()
 			queue_free()
 	
 func hurt():
