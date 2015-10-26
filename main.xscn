@@ -14,7 +14,7 @@
 				<string> "Node" </string>
 				<string> "_import_path" </string>
 				<string> "__meta__" </string>
-				<string> "Default" </string>
+				<string> "SceneDefault" </string>
 				<string> "stage-2" </string>
 			</string_array>
 			<string> "node_count" </string>
@@ -151,12 +151,11 @@
 							<string> "current" </string>
 							<int> 1 </int>
 							<string> "sources" </string>
-							<array  len="5" shared="false">
+							<array  len="4" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://bar.gd" </string>
-								<string> "res://moving-brick.gd" </string>
-								<string> "res://ghost-brick.gd" </string>
+								<string> "res://green-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
@@ -441,13 +440,12 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 3 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="4" shared="false">
+							<array  len="3" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://bar.gd" </string>
-								<string> "res://ghost-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>

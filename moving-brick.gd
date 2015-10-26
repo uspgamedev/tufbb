@@ -38,13 +38,14 @@ func _fixed_process (delta):
 	if (life <= 0):
 		cont += 1
 		if (cont == 30):
-			get_node("/root/SceneRoot/Default").brickHasDied()
 			queue_free()
 	
 func hurt():
 	life -= 1
 	
 	if (life <= 0):
+		get_node("/root/SceneRoot/SceneDefault").brickHasDied()
+		
 		var tween = get_node("Tween")
 		
 		set_layer_mask(2)

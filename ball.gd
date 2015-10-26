@@ -62,7 +62,14 @@ func _fixed_process(delta):
 		placar.store_32(score)
 		placar.close()
 		get_tree().change_scene("res://gameover.xscn")
-		
+	
+	var main = get_node("../")
+	if (main.bricks == 1):
+		placar.open(file_name, File.WRITE)
+		score += 1
+		placar.store_32(score)
+		placar.close()
+		get_tree().change_scene("res://youwin.xscn")
 	
 func _colide_com_brick (body):
 	var tween = get_node ("../Tween")
@@ -91,14 +98,6 @@ func _colide_com_brick (body):
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
 		body.hurt()
-	
-	var main = get_node("../")
-	if (not main.bricks):
-		placar.open(file_name, File.WRITE)
-		score += 1
-		placar.store_32(score)
-		placar.close()
-		#get_tree().change_scene("res://youwin.xscn")
 	
 	tween.set_repeat(false)
 	tween.start()

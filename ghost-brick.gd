@@ -13,17 +13,6 @@ func _ready():
 	set_fixed_process (true)
 	add_to_group("brick_1hit")
 	
-	#falling level:
-	
-	var tween = get_node("Tween")
-	var posicao = get_pos()
-	#var random = 0.5 + randf()
-	
-	#tween.interpolate_method(self, "set_pos", Vector2(posicao.x, posicao.y + 100), self.get_pos(), random, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	
-	tween.set_repeat(false)
-	tween.start()
-	
 func _fixed_process(delta):
 	if (life <= 0):
 		cont += 1
@@ -40,6 +29,9 @@ func _fixed_process(delta):
 func hurt():
 	life -= 1
 	
+	if (life <= 0):
+		get_node("/root/SceneRoot/SceneDefault").brickHasDied()
+	
 	set_layer_mask(2)
 	set_collision_mask(2)
 	
@@ -48,7 +40,6 @@ func hurt():
 	#queda na morte:
 	
 	tween.interpolate_method(self, "set_pos", self.get_pos(), Vector2(self.get_pos().x, self.get_pos().y + 30), 0.5, state.trans, state.eases)
-	
 	
 	#fade out:
 	
@@ -64,9 +55,8 @@ func aparece ():
 	set_layer_mask(1)
 	set_collision_mask(1)
 	
-	#stage 1: coluna = 340
 	var linha = 60 + randi() % 701
-	var coluna = 30 + randi() % 301
+	var coluna = get_pos().y
 	
 	var tween = get_node("Tween")
 	var random = randi() % 2

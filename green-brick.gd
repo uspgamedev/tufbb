@@ -32,6 +32,9 @@ func _fixed_process(delta):
 func hurt():
 	life -= 1
 	
+	if (life ==0):
+		get_node("/root/SceneRoot/SceneDefault").brickHasDied()
+	
 	set_layer_mask(2)
 	set_collision_mask(2)
 	
