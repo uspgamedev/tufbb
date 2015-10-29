@@ -147,9 +147,9 @@
 				<string> "playback/active" </string>
 				<string> "playback/repeat" </string>
 				<string> "playback/speed" </string>
-				<string> "_colide_com_barra" </string>
-				<string> "body_enter" </string>
 				<string> "_colide_com_brick" </string>
+				<string> "body_enter" </string>
+				<string> "_colide_com_barra" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 16 </int>
@@ -284,7 +284,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 3 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
 							<array  len="4" shared="false">
 								<string> "res://ball.gd" </string>
