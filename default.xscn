@@ -161,7 +161,7 @@
 				<resource  resource_type="Script" path="res://main.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -284,7 +284,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="4" shared="false">
 								<string> "res://ball.gd" </string>
@@ -342,7 +342,7 @@
 				<real> 131 </real>
 				<real> 135 </real>
 				<real> 266 </real>
-				<real> 720 </real>
+				<real> 700 </real>
 				<real> 10 </real>
 				<real> 760 </real>
 				<real> 23 </real>

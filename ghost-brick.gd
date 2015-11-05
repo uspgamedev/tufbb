@@ -30,7 +30,7 @@ func hurt():
 	life -= 1
 	
 	if (life <= 0):
-		get_node("/root/SceneRoot/SceneDefault").brickHasDied()
+		get_node("/root/SceneRoot/SceneDefault").brickHasDied(900)
 	
 	set_layer_mask(2)
 	set_collision_mask(2)

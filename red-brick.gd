@@ -35,7 +35,7 @@ func hurt():
 	life -= 1
 	
 	if (life <= 0):
-		get_node("/root/SceneRoot/SceneDefault").brickHasDied()
+		get_node("/root/SceneRoot/SceneDefault").brickHasDied(400)
 		
 		var tween = get_node("Tween")
 		

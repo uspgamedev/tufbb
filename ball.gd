@@ -7,7 +7,6 @@ var esquerda
 var cima
 var baixo
 var cont = 0
-var my_score
 var file_name = "res://placar"
 var score
 var placar = File.new()
@@ -37,11 +36,8 @@ func _ready():
 		placar.store_32(score)
 	placar.close()
 	
-	var label = get_node("../Label")
-	placar.close()
-	label.set_text(str("Score: ", score))
-	
 func _fixed_process(delta):
+	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
 	
@@ -58,15 +54,18 @@ func _fixed_process(delta):
 	
 	if (cima > rect.end.y):
 		placar.open(file_name, File.WRITE)
-		score -= 1
+		score -= 300
 		placar.store_32(score)
 		placar.close()
 		get_tree().change_scene("res://gameover.xscn")
 	
 	var main = get_node("../")
 	if (main.bricks == 1):
+		placar.open(file_name, File.READ)
+		score = placar.get_32()
+		placar.close()
 		placar.open(file_name, File.WRITE)
-		score += 1
+		score += 1000
 		placar.store_32(score)
 		placar.close()
 		get_tree().change_scene("res://youwin.xscn")
@@ -98,6 +97,8 @@ func _colide_com_brick (body):
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
 		body.hurt()
+		var main = get_node("../")
+		main.score += 100
 	
 	tween.set_repeat(false)
 	tween.start()

@@ -31,7 +31,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -251.972, -113.974 </vector2>
+							<vector2> -191.087, -33.0133 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -51,7 +51,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 1.227737 </real>
+							<real> 1.360373 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -148,7 +148,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 3 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://ball.gd" </string>
