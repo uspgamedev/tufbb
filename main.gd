@@ -11,6 +11,8 @@ func _ready():
 	node = scene.instance()
 	add_child(node)
 	
+	move_child(node, 0)
+	
 func _fixed_process(delta):
 	if(Input.is_action_pressed("ui_cancel")):
 		get_tree().quit()
