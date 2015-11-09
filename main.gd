@@ -2,7 +2,7 @@
 extends Node
 
 var bricks
-var scene = preload("res://stage-1.xscn")
+var scene = preload("res://stage-3.xscn")
 var node
 var points
 var file_name = "res://placar"

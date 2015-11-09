@@ -22,7 +22,7 @@ func _ready():
 	
 	random = 100 + randf()*300
 	#set_linear_velocity(Vector2(400 - random, random))
-	set_linear_velocity(Vector2(200, 200))
+	set_linear_velocity(Vector2(250, 150))
 	
 	placar.open(file_name, File.READ)
 	if placar.is_open():

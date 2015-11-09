@@ -13,6 +13,7 @@ var cont = 0
 var cont2 = 0
 var cont3 = 0
 var temp2 = 1
+var ini
 
 func _ready():
 	set_fixed_process (true)
@@ -20,6 +21,8 @@ func _ready():
 	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
+	
+	ini = get_pos()
 	
 func _fixed_process (delta):
 
@@ -44,15 +47,15 @@ func _fixed_process (delta):
 		cont3 = (cont3 + 1) % (30*temp2 + 1)
 	
 	if (cont2 == 0 and cont3 == 0):
-		var posicao = Vector2(self.get_pos().x + (randi()%200)-100, (self.get_pos().y + randi()%200)-100)
-		if (posicao.x < 22):
-			posicao.x = self.get_pos().x + (randi()%200)
-		elif (posicao.x > 772):
-			posicao.x = self.get_pos().x - (randi()%200)
-		if (posicao.y < 32):
-			posicao.y = self.get_pos().y + (randi()%200)
-		elif (posicao.y > 502):
-			posicao.y = self.get_pos().y - (randi()%200)
+		var posicao = Vector2(self.get_pos().x + (randi()%321)-160, (self.get_pos().y + randi()%91)-45)
+		if (posicao.x < ini.x):
+			posicao.x = self.get_pos().x + (randi()%321)
+		elif (posicao.x > ini.x + 320):
+			posicao.x = self.get_pos().x - (randi()%321)
+		if (posicao.y < ini.y):
+			posicao.y = self.get_pos().y + (randi()%91)
+		elif (posicao.y > ini.y + 90):
+			posicao.y = self.get_pos().y - (randi()%91)
 		temp = 2 + randi() % 4
 		tween.interpolate_method(self, "set_pos", self.get_pos(), posicao, temp, Tween.TRANS_ELASTIC, Tween.EASE_OUT_IN)
 		cont2 = 1
@@ -104,8 +107,8 @@ func aparece ():
 	set_layer_mask(1)
 	set_collision_mask(1)
 	
-	var linha = 22 + randi() % 752
-	var coluna = 32 + randi() % 472
+	var linha = ini.x + randi() % 321
+	var coluna = ini.y + randi() % 91
 	
 	var tween = get_node("Tween")
 	
