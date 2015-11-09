@@ -22,7 +22,7 @@ func _ready():
 	
 	random = 100 + randf()*300
 	#set_linear_velocity(Vector2(400 - random, random))
-	set_linear_velocity(Vector2(100, 300))
+	set_linear_velocity(Vector2(200, 200))
 	
 	placar.open(file_name, File.READ)
 	if placar.is_open():
@@ -53,19 +53,20 @@ func _fixed_process(delta):
 	baixo = posicao.y + tamanho.y/2
 	
 	if (cima > rect.end.y):
+		var main = get_node("../")
 		placar.open(file_name, File.WRITE)
-		score -= 300
-		placar.store_32(score)
+		main.score *= 0.7 + randf()*0.1
+		placar.store_32(main.score)
 		placar.close()
 		get_tree().change_scene("res://gameover.xscn")
 	
 	var main = get_node("../")
-	if (main.bricks == 1):
+	if (main.bricks <= 1):
 		placar.open(file_name, File.READ)
 		score = placar.get_32()
 		placar.close()
 		placar.open(file_name, File.WRITE)
-		score += 1000
+		score += 10000
 		placar.store_32(score)
 		placar.close()
 		get_tree().change_scene("res://youwin.xscn")

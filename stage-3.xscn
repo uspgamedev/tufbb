@@ -8,7 +8,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="42">
+			<string_array  len="47">
 				<string> "SceneRoot" </string>
 				<string> "Node" </string>
 				<string> "_import_path" </string>
@@ -51,11 +51,16 @@
 				<string> "color_from" </string>
 				<string> "ColorPicker" </string>
 				<string> "color_to" </string>
+				<string> "Tween" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/active" </string>
+				<string> "playback/repeat" </string>
+				<string> "playback/speed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 6 </int>
 			<string> "nodes" </string>
-			<int_array  len="181"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 22, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 2, 15, 9, 16, 2, 17, 10, 18, 11, 19, 11, 20, 4, 21, 4, 22, 8, 23, 12, 24, 11, 25, 13, 3, 14, 0, 0, 0, 27, 26, -1, 17, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 28, 15, 29, 15, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 3, 17, 0, 2, 0, 40, 39, -1, 16, 2, 0, 6, 11, 7, 3, 8, 3, 9, 4, 28, 18, 29, 19, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 0, 2, 0, 40, 41, -1, 16, 2, 0, 6, 11, 7, 3, 8, 3, 9, 4, 28, 18, 29, 19, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 0 </int_array>
+			<int_array  len="198"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 22, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 2, 15, 9, 16, 2, 17, 10, 18, 11, 19, 11, 20, 4, 21, 4, 22, 8, 23, 12, 24, 11, 25, 13, 3, 14, 0, 0, 0, 27, 26, -1, 17, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 28, 15, 29, 15, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 3, 17, 0, 2, 0, 40, 39, -1, 16, 2, 0, 6, 11, 7, 3, 8, 3, 9, 4, 28, 18, 29, 19, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 0, 2, 0, 40, 41, -1, 16, 2, 0, 6, 11, 7, 3, 8, 3, 9, 4, 28, 18, 29, 19, 30, 0, 31, 0, 32, 0, 33, 0, 34, 11, 35, 11, 36, 16, 37, 16, 38, 3, 0, 0, 0, 42, 42, -1, 5, 2, 0, 43, 4, 44, 11, 45, 11, 46, 3, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="20" shared="false">
 				<node_path> "" </node_path>
@@ -67,7 +72,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -242.749, -29.0647 </vector2>
+							<vector2> -194.022, -27.089 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -87,7 +92,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 1.360373 </real>
+							<real> 0.902499 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -180,6 +185,17 @@
 							<real> 500 </real>
 							<string> "znear" </string>
 							<real> 0.1 </real>
+						</dictionary>
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 0 </int>
+							<string> "sources" </string>
+							<array  len="3" shared="false">
+								<string> "res://moving-brick.gd" </string>
+								<string> "res://ghost-brick.gd" </string>
+								<string> "res://ball.gd" </string>
+							</array>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>

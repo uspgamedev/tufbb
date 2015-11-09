@@ -8,10 +8,13 @@ var state = {
 }
 var cont = 0
 var cont2 = 0
+var ini
 
 func _ready():
 	set_fixed_process (true)
 	add_to_group("brick_1hit")
+	
+	ini = self.get_pos().x
 	
 func _fixed_process(delta):
 	if (life <= 0):
@@ -19,12 +22,16 @@ func _fixed_process(delta):
 		if (cont == 30):
 			queue_free()
 	else:
-		if (cont2 == 0):
-			desaparece()
+		var random = randi() % 500
 		if (cont2 == 120):
 			aparece()
+			cont2 = 0
+		elif (random == 0 and cont2 == 0):
+			desaparece()
+			cont2 = 1
 	
-	cont2 = (cont2 + 1) % 300
+	if (cont2 >= 1):
+		cont2 = (cont2 + 1) % 121
 	
 func hurt():
 	life -= 1
@@ -43,32 +50,29 @@ func hurt():
 	
 	#fade out:
 	
-	color_change(Color(1, 1, 1, 1), Color(0, 0, 0, 1), 0.5)
+	color_change(Color(1, 1, 1, 1), Color(1, 1, 1, 0), 0.5)
 
 func desaparece ():
 	set_layer_mask(2)
 	set_collision_mask(2)
 	
-	color_change(Color(1, 1, 1, 1), Color(0, 0, 0, 1), 1)
+	color_change(Color(1, 1, 1, 1), Color(1, 1, 1, 0), 1)
 
 func aparece ():
 	set_layer_mask(1)
 	set_collision_mask(1)
 	
-	var linha = 60 + randi() % 701
-	var coluna = get_pos().y
+	var linha = ini - randi() % 220
 	
 	var tween = get_node("Tween")
-	var random = randi() % 2
-	var vector = [Vector2(linha, 40), Vector2(linha, coluna)]
 	
-	tween.interpolate_method(self, "set_pos", self.get_pos(), vector[random], 0.00001, state.trans, state.eases)
+	tween.interpolate_method(self, "set_pos", self.get_pos(), Vector2(linha, self.get_pos().y), 0.00001, state.trans, state.eases)
 	
 	tween.set_repeat(false)
 	tween.start()
 	
-	color_change(Color(0, 0, 0, 1), Color(1, 1, 1, 1), 1)
-
+	color_change(Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1)
+	
 func color_change (before, after, t):
 	var tween = get_node("../Tween")
 	var sprite = get_node("ghost-brick")

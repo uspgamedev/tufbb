@@ -52,7 +52,7 @@ func hurt():
 		get_node("color/color_from").set_color(Color(1, 1, 1, 1))
 		get_node("color/color_from").connect("color_changed", self, "on_color_changed")
 		
-		get_node("color/color_to").set_color(Color(0, 0, 0, 1))
+		get_node("color/color_to").set_color(Color(1, 1, 1, 0))
 		get_node("color/color_to").connect("color_changed", self, "on_color_changed")
 		
 		var color_from = get_node("color/color_from").get_color()
