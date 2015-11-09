@@ -2,7 +2,6 @@
 extends Node
 
 var bricks
-var scene = preload("res://stage-3.xscn")
 var node
 var points
 var file_name = "res://placar"
@@ -11,6 +10,11 @@ var placar = File.new()
 
 func _ready():
 	set_fixed_process(true)
+	
+	var root_children = get_node("/root").get_children()
+	print (root_children)
+	var scene = root_children[root_children.size() - 2].next_scene()
+	print ("next scene")
 	
 	node = scene.instance()
 	add_child(node)
