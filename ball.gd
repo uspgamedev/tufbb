@@ -22,7 +22,7 @@ func _ready():
 	
 	random = 100 + randf()*300
 	#set_linear_velocity(Vector2(400 - random, random))
-	set_linear_velocity(Vector2(250, 150))
+	set_linear_velocity(Vector2(250, 250))
 	
 	placar.open(file_name, File.READ)
 	if placar.is_open():
@@ -61,6 +61,7 @@ func _fixed_process(delta):
 		get_tree().change_scene("res://gameover.xscn")
 	
 	var main = get_node("../")
+	
 	if (main.bricks <= 1):
 		placar.open(file_name, File.READ)
 		score = placar.get_32()
@@ -69,6 +70,7 @@ func _fixed_process(delta):
 		score += 10000
 		placar.store_32(score)
 		placar.close()
+		get_node("/root/globals").sum_stage()
 		get_tree().change_scene("res://youwin.xscn")
 	
 func _colide_com_brick (body):

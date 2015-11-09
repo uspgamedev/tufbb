@@ -12,9 +12,8 @@ func _ready():
 	set_fixed_process(true)
 	
 	var root_children = get_node("/root").get_children()
-	print (root_children)
-	var scene = root_children[root_children.size() - 2].next_scene()
-	print ("next scene")
+	
+	var scene = root_children[0].next_scene()
 	
 	node = scene.instance()
 	add_child(node)
@@ -44,7 +43,7 @@ func brickHasDied(points):
 	var brick2 = get_tree().get_nodes_in_group("brick_2hit").size()
 	var brick3 = get_tree().get_nodes_in_group("brick_3hit").size()
 	
-	bricks = brick1 + 2*brick2 + 3*brick3
+	bricks = brick1 + brick2 + brick3
 	
 	placar.open(file_name, File.WRITE)
 	score += points

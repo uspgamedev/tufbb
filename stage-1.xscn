@@ -60,20 +60,14 @@
 				<string> "playback/active" </string>
 				<string> "playback/repeat" </string>
 				<string> "playback/speed" </string>
-				<string> "green-brick" </string>
-				<string> "StaticBody2D" </string>
-				<string> "green-brick1" </string>
 				<string> "green-brick2" </string>
-				<string> "green-brick3" </string>
+				<string> "StaticBody2D" </string>
 				<string> "green-brick4" </string>
-				<string> "green-brick5" </string>
-				<string> "green-brick6" </string>
-				<string> "green-brick7" </string>
-				<string> "green-brick8" </string>
-				<string> "green-brick9" </string>
-				<string> "green-brick10" </string>
-				<string> "green-brick11" </string>
 				<string> "green-brick12" </string>
+				<string> "yellow-brick" </string>
+				<string> "yellow-brick6" </string>
+				<string> "yellow-brick1" </string>
+				<string> "yellow-brick2" </string>
 				<string> "green-brick13" </string>
 				<string> "green-brick14" </string>
 				<string> "green-brick15" </string>
@@ -81,24 +75,30 @@
 				<string> "green-brick17" </string>
 				<string> "green-brick18" </string>
 				<string> "green-brick19" </string>
-				<string> "yellow-brick" </string>
-				<string> "yellow-brick1" </string>
-				<string> "yellow-brick2" </string>
-				<string> "yellow-brick3" </string>
-				<string> "yellow-brick4" </string>
-				<string> "yellow-brick5" </string>
-				<string> "yellow-brick6" </string>
+				<string> "green-brick20" </string>
+				<string> "green-brick21" </string>
+				<string> "green-brick22" </string>
+				<string> "green-brick24" </string>
+				<string> "green-brick25" </string>
+				<string> "green-brick26" </string>
+				<string> "green-brick27" </string>
+				<string> "green-brick28" </string>
+				<string> "green-brick29" </string>
+				<string> "yellow-brick7" </string>
+				<string> "yellow-brick8" </string>
+				<string> "yellow-brick9" </string>
+				<string> "green-brick5" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 33 </int>
 			<string> "nodes" </string>
-			<int_array  len="553"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 23, 2, 0, 6, 2, 7, 3, 8, 3, 9, 2, 10, 4, 11, 5, 12, 6, 13, 7, 14, 8, 15, 2, 16, 9, 17, 2, 18, 10, 19, 11, 20, 11, 21, 4, 22, 4, 23, 8, 24, 12, 25, 11, 26, 13, 3, 14, 0, 0, 0, 28, 27, -1, 17, 2, 0, 6, 11, 7, 3, 8, 3, 10, 4, 29, 15, 30, 15, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 3, 17, 0, 2, 0, 41, 40, -1, 16, 2, 0, 6, 2, 7, 3, 8, 3, 10, 4, 29, 18, 30, 19, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 0, 2, 0, 41, 42, -1, 17, 2, 0, 6, 2, 7, 3, 8, 3, 10, 4, 43, 20, 29, 18, 30, 21, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 0, 0, 0, 44, 44, -1, 5, 2, 0, 45, 4, 46, 11, 47, 11, 48, 3, 0, 0, 0, 50, 49, 22, 3, 2, 0, 11, 23, 3, 24, 0, 0, 0, 50, 51, 22, 3, 2, 0, 11, 25, 3, 24, 0, 0, 0, 50, 52, 22, 3, 2, 0, 11, 26, 3, 24, 0, 0, 0, 50, 53, 22, 3, 2, 0, 11, 27, 3, 24, 0, 0, 0, 50, 54, 22, 3, 2, 0, 11, 28, 3, 24, 0, 0, 0, 50, 55, 22, 3, 2, 0, 11, 29, 3, 24, 0, 0, 0, 50, 56, 22, 3, 2, 0, 11, 30, 3, 24, 0, 0, 0, 50, 57, 22, 3, 2, 0, 11, 31, 3, 24, 0, 0, 0, 50, 58, 22, 3, 2, 0, 11, 32, 3, 24, 0, 0, 0, 50, 59, 22, 3, 2, 0, 11, 33, 3, 24, 0, 0, 0, 50, 60, 22, 3, 2, 0, 11, 34, 3, 24, 0, 0, 0, 50, 61, 22, 3, 2, 0, 11, 35, 3, 24, 0, 0, 0, 50, 62, 22, 3, 2, 0, 11, 36, 3, 24, 0, 0, 0, 50, 63, 22, 3, 2, 0, 11, 37, 3, 24, 0, 0, 0, 50, 64, 22, 3, 2, 0, 11, 38, 3, 24, 0, 0, 0, 50, 65, 22, 3, 2, 0, 11, 39, 3, 24, 0, 0, 0, 50, 66, 22, 3, 2, 0, 11, 40, 3, 24, 0, 0, 0, 50, 67, 22, 3, 2, 0, 11, 41, 3, 24, 0, 0, 0, 50, 68, 22, 3, 2, 0, 11, 42, 3, 24, 0, 0, 0, 50, 69, 22, 3, 2, 0, 11, 43, 3, 24, 0, 0, 0, 50, 70, 44, 3, 2, 0, 11, 45, 3, 46, 0, 0, 0, 50, 71, 44, 3, 2, 0, 11, 47, 3, 46, 0, 0, 0, 50, 72, 44, 3, 2, 0, 11, 48, 3, 46, 0, 0, 0, 50, 73, 44, 3, 2, 0, 11, 49, 3, 46, 0, 0, 0, 50, 74, 44, 3, 2, 0, 11, 50, 3, 46, 0, 0, 0, 50, 75, 44, 3, 2, 0, 11, 51, 3, 46, 0, 0, 0, 50, 76, 44, 3, 2, 0, 11, 52, 3, 46, 0 </int_array>
+			<int_array  len="553"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 23, 2, 0, 6, 2, 7, 3, 8, 3, 9, 2, 10, 4, 11, 5, 12, 6, 13, 7, 14, 8, 15, 2, 16, 9, 17, 2, 18, 10, 19, 11, 20, 11, 21, 4, 22, 4, 23, 8, 24, 12, 25, 11, 26, 13, 3, 14, 0, 0, 0, 28, 27, -1, 17, 2, 0, 6, 11, 7, 3, 8, 3, 10, 4, 29, 15, 30, 15, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 3, 17, 0, 2, 0, 41, 40, -1, 16, 2, 0, 6, 2, 7, 3, 8, 3, 10, 4, 29, 18, 30, 19, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 0, 2, 0, 41, 42, -1, 17, 2, 0, 6, 2, 7, 3, 8, 3, 10, 4, 43, 20, 29, 18, 30, 21, 31, 0, 32, 0, 33, 0, 34, 0, 35, 11, 36, 11, 37, 16, 38, 16, 39, 3, 0, 0, 0, 44, 44, -1, 5, 2, 0, 45, 4, 46, 11, 47, 11, 48, 3, 0, 0, 0, 50, 49, 22, 3, 2, 0, 11, 23, 3, 24, 0, 0, 0, 50, 51, 22, 3, 2, 0, 11, 25, 3, 24, 0, 0, 0, 50, 52, 22, 3, 2, 0, 11, 26, 3, 24, 0, 0, 0, 50, 53, 27, 3, 2, 0, 11, 28, 3, 29, 0, 0, 0, 50, 54, 27, 3, 2, 0, 11, 30, 3, 29, 0, 0, 0, 50, 55, 27, 3, 2, 0, 11, 31, 3, 29, 0, 0, 0, 50, 56, 27, 3, 2, 0, 11, 32, 3, 29, 0, 0, 0, 50, 57, 22, 3, 2, 0, 11, 33, 3, 24, 0, 0, 0, 50, 58, 22, 3, 2, 0, 11, 34, 3, 24, 0, 0, 0, 50, 59, 22, 3, 2, 0, 11, 35, 3, 24, 0, 0, 0, 50, 60, 22, 3, 2, 0, 11, 36, 3, 24, 0, 0, 0, 50, 61, 22, 3, 2, 0, 11, 37, 3, 24, 0, 0, 0, 50, 62, 22, 3, 2, 0, 11, 38, 3, 24, 0, 0, 0, 50, 63, 22, 3, 2, 0, 11, 39, 3, 24, 0, 0, 0, 50, 64, 22, 3, 2, 0, 11, 40, 3, 24, 0, 0, 0, 50, 65, 22, 3, 2, 0, 11, 41, 3, 24, 0, 0, 0, 50, 66, 22, 3, 2, 0, 11, 42, 3, 24, 0, 0, 0, 50, 67, 22, 3, 2, 0, 11, 43, 3, 24, 0, 0, 0, 50, 68, 22, 3, 2, 0, 11, 44, 3, 24, 0, 0, 0, 50, 69, 22, 3, 2, 0, 11, 45, 3, 24, 0, 0, 0, 50, 70, 22, 3, 2, 0, 11, 46, 3, 24, 0, 0, 0, 50, 71, 22, 3, 2, 0, 11, 47, 3, 24, 0, 0, 0, 50, 72, 22, 3, 2, 0, 11, 48, 3, 24, 0, 0, 0, 50, 73, 27, 3, 2, 0, 11, 49, 3, 29, 0, 0, 0, 50, 74, 27, 3, 2, 0, 11, 50, 3, 29, 0, 0, 0, 50, 75, 27, 3, 2, 0, 11, 51, 3, 29, 0, 0, 0, 50, 76, 22, 3, 2, 0, 11, 52, 3, 24, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="53" shared="false">
 				<node_path> "" </node_path>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -265,7 +265,7 @@
 				<real> 135 </real>
 				<real> 266 </real>
 				<resource  resource_type="PackedScene" path="res://green-brick.xscn">  </resource>
-				<vector2> 292, 132 </vector2>
+				<vector2> 192, 132 </vector2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
@@ -408,25 +408,8 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<vector2> 242, 132 </vector2>
-				<vector2> 192, 132 </vector2>
-				<vector2> 192, 102 </vector2>
 				<vector2> 592, 72 </vector2>
-				<vector2> 542, 72 </vector2>
-				<vector2> 492, 72 </vector2>
-				<vector2> 442, 72 </vector2>
-				<vector2> 392, 72 </vector2>
-				<vector2> 342, 72 </vector2>
-				<vector2> 292, 72 </vector2>
-				<vector2> 242, 72 </vector2>
 				<vector2> 192, 72 </vector2>
-				<vector2> 342, 132 </vector2>
-				<vector2> 392, 132 </vector2>
-				<vector2> 442, 132 </vector2>
-				<vector2> 492, 132 </vector2>
-				<vector2> 542, 132 </vector2>
-				<vector2> 592, 132 </vector2>
-				<vector2> 592, 102 </vector2>
 				<resource  resource_type="PackedScene" path="res://yellow-brick.xscn">  </resource>
 				<vector2> 242, 102 </vector2>
 				<dictionary  shared="false">
@@ -571,12 +554,29 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
+				<vector2> 542, 102 </vector2>
 				<vector2> 292, 102 </vector2>
 				<vector2> 342, 102 </vector2>
-				<vector2> 392, 102 </vector2>
-				<vector2> 442, 102 </vector2>
+				<vector2> 192, 102 </vector2>
+				<vector2> 242, 132 </vector2>
+				<vector2> 292, 132 </vector2>
+				<vector2> 342, 132 </vector2>
+				<vector2> 392, 132 </vector2>
+				<vector2> 442, 132 </vector2>
+				<vector2> 492, 132 </vector2>
+				<vector2> 542, 132 </vector2>
+				<vector2> 592, 132 </vector2>
+				<vector2> 592, 102 </vector2>
+				<vector2> 492, 72 </vector2>
+				<vector2> 442, 72 </vector2>
+				<vector2> 392, 72 </vector2>
+				<vector2> 342, 72 </vector2>
+				<vector2> 292, 72 </vector2>
+				<vector2> 242, 72 </vector2>
 				<vector2> 492, 102 </vector2>
-				<vector2> 542, 102 </vector2>
+				<vector2> 442, 102 </vector2>
+				<vector2> 392, 102 </vector2>
+				<vector2> 542, 72 </vector2>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>

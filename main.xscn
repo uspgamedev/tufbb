@@ -148,16 +148,13 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="8" shared="false">
+							<array  len="5" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://bar.gd" </string>
 								<string> "res://green-brick.gd" </string>
-								<string> "res://red-brick.gd" </string>
-								<string> "res://label.gd" </string>
-								<string> "res://ghost-brick.gd" </string>
 								<string> "res://global.gd" </string>
 							</array>
 						</dictionary>
