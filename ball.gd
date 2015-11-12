@@ -27,8 +27,7 @@ func _ready():
 	placar.open(file_name, File.READ)
 	if placar.is_open():
 		score = placar.get_32()
-		if (!score):
-			score = 0
+		score = 0
 	else:
 		placar = File.new()
 		placar.open(file_name, File.WRITE)

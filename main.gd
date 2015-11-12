@@ -35,7 +35,6 @@ func _fixed_process(delta):
 		get_tree().quit()
 	
 	var label = get_node("Label")
-	placar.close()
 	label.set_text(str("Score: ", score))
 	
 func brickHasDied(points):
