@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="6" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+	<ext_resource path="res://gameover.gd" type="Script"></ext_resource>
+	<ext_resource path="res://Sprites/brickosphere.png" type="Texture"></ext_resource>
+	<ext_resource path="res://brickosphere.gd" type="Script"></ext_resource>
+	<ext_resource path="res://GameOver.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://press2play.gd" type="Script"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "names" </string>
+			<string_array  len="61">
+				<string> "SceneRoot" </string>
+				<string> "Node2D" </string>
+				<string> "_import_path" </string>
+				<string> "visibility/visible" </string>
+				<string> "visibility/opacity" </string>
+				<string> "visibility/self_opacity" </string>
+				<string> "visibility/light_mask" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/rot" </string>
+				<string> "transform/scale" </string>
+				<string> "z/z" </string>
+				<string> "z/relative" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "offset" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
+				<string> "Tween" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/active" </string>
+				<string> "playback/repeat" </string>
+				<string> "playback/speed" </string>
+				<string> "color" </string>
+				<string> "VBoxContainer" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus_neighbour/left" </string>
+				<string> "focus_neighbour/top" </string>
+				<string> "focus_neighbour/right" </string>
+				<string> "focus_neighbour/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "size_flags/stretch_ratio" </string>
+				<string> "color-to" </string>
+				<string> "ColorPicker" </string>
+				<string> "color-from" </string>
+				<string> "margin/top" </string>
+				<string> "press2play" </string>
+				<string> "Button" </string>
+				<string> "margin/left" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "disabled" </string>
+				<string> "toggle_mode" </string>
+				<string> "is_pressed" </string>
+				<string> "click_on_press" </string>
+				<string> "text" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "clip_text" </string>
+				<string> "align" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 7 </int>
+			<string> "nodes" </string>
+			<int_array  len="283"> 				-1, -1, 1, 0, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 9, 0, 0, 0, 14, 14, -1, 22, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 10, 8, 5, 9, 11, 10, 7, 11, 1, 15, 12, 16, 1, 17, 4, 18, 13, 19, 13, 20, 3, 21, 3, 22, 7, 23, 14, 24, 13, 25, 15, 12, 16, 0, 1, 0, 26, 26, -1, 5, 2, 0, 27, 3, 28, 13, 29, 13, 30, 2, 0, 1, 0, 32, 31, -1, 16, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 33, 17, 34, 17, 35, 0, 36, 0, 37, 0, 38, 0, 39, 13, 40, 13, 41, 18, 42, 18, 43, 2, 0, 3, 0, 45, 44, -1, 16, 2, 0, 3, 13, 4, 2, 5, 2, 6, 3, 33, 19, 34, 20, 35, 0, 36, 0, 37, 0, 38, 0, 39, 13, 40, 13, 41, 18, 42, 18, 43, 2, 0, 3, 0, 45, 46, -1, 17, 2, 0, 3, 13, 4, 2, 5, 2, 6, 3, 47, 21, 33, 19, 34, 22, 35, 0, 36, 0, 37, 0, 38, 0, 39, 13, 40, 13, 41, 18, 42, 18, 43, 2, 0, 0, 0, 49, 48, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 50, 23, 47, 24, 33, 25, 34, 26, 35, 0, 36, 0, 37, 0, 38, 0, 39, 13, 40, 1, 41, 18, 42, 18, 43, 2, 51, 27, 52, 13, 53, 13, 54, 13, 55, 13, 56, 28, 57, 29, 58, 13, 59, 13, 60, 3, 12, 30, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="31" shared="false">
+				<node_path> "" </node_path>
+				<bool> True </bool>
+				<real> 1 </real>
+				<int> 1 </int>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
+				<int> 0 </int>
+				<resource  resource_type="Script" path="res://gameover.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "Script" </string>
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "ofs" </string>
+							<vector2> -173.933, -63.1825 </vector2>
+							<string> "snap_grid" </string>
+							<bool> True </bool>
+							<string> "snap_offset" </string>
+							<vector2> 0, 0 </vector2>
+							<string> "snap_pixel" </string>
+							<bool> False </bool>
+							<string> "snap_relative" </string>
+							<bool> False </bool>
+							<string> "snap_rotation" </string>
+							<bool> False </bool>
+							<string> "snap_rotation_offset" </string>
+							<real> 0 </real>
+							<string> "snap_rotation_step" </string>
+							<real> 0.261799 </real>
+							<string> "snap_show_grid" </string>
+							<bool> True </bool>
+							<string> "snap_step" </string>
+							<vector2> 10, 10 </vector2>
+							<string> "zoom" </string>
+							<real> 1.227738 </real>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "ambient_light_color" </string>
+							<color> 0.15, 0.15, 0.15, 1 </color>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+								</dictionary>
+							</array>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 4 </int>
+							<string> "sources" </string>
+							<array  len="5" shared="false">
+								<string> "res://gameover.gd" </string>
+								<string> "res://home-run.gd" </string>
+								<string> "res://brickosphere.gd" </string>
+								<string> "res://press2play.gd" </string>
+								<string> "res://ball.gd" </string>
+							</array>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+				</dictionary>
+				<vector2> 397.4, 118.5 </vector2>
+				<vector2> 0.7, 0.7 </vector2>
+				<resource  resource_type="Texture" path="res://Sprites/brickosphere.png">  </resource>
+				<bool> False </bool>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
+				<resource  resource_type="Script" path="res://brickosphere.gd">  </resource>
+				<real> 40 </real>
+				<int> 2 </int>
+				<real> 159 </real>
+				<real> 131 </real>
+				<real> 135 </real>
+				<real> 266 </real>
+				<real> 230 </real>
+				<real> 320 </real>
+				<real> 540 </real>
+				<real> 390 </real>
+				<resource  resource_type="Font" path="res://GameOver.fnt">  </resource>
+				<string> "Press to play" </string>
+				<resource name=""></resource>				<resource  resource_type="Script" path="res://press2play.gd">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 1 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

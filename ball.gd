@@ -14,7 +14,7 @@ var random
 var velocidade = Vector2 (1, 1)
 var state = {
 	trans = Tween.TRANS_LINEAR,
-	eases = Tween .EASE_IN,
+	eases = Tween.EASE_IN,
 }
 
 func _ready():
