@@ -3,7 +3,6 @@ extends Label
 var file_name = "res://placar"
 var score
 var tmp
-var i
 var cont = 0
 var placar = File.new()
 

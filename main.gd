@@ -12,7 +12,6 @@ func _ready():
 	set_fixed_process(true)
 	
 	var root_children = get_node("/root").get_children()
-	
 	var scene = root_children[0].next_scene()
 	
 	node = scene.instance()

@@ -94,13 +94,13 @@
 				<resource  resource_type="Script" path="res://menu.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -173.933, -63.1825 </vector2>
+							<vector2> -71.0428, 43.2922 </vector2>
 							<string> "snap_grid" </string>
 							<bool> True </bool>
 							<string> "snap_offset" </string>
@@ -120,7 +120,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 1.227738 </real>
+							<real> 1.108034 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -256,7 +256,7 @@
 				<real> 540 </real>
 				<real> 380 </real>
 				<resource  resource_type="Font" path="res://GameOver.fnt">  </resource>
-				<string> "Press to play" </string>
+				<string> "Play" </string>
 				<resource name=""></resource>				<resource  resource_type="Script" path="res://press2play.gd">  </resource>
 				<real> 420 </real>
 				<real> 490 </real>

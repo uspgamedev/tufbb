@@ -70,9 +70,14 @@ func _fixed_process(delta):
 		placar.store_32(score)
 		placar.close()
 		get_node("/root/globals").sum_stage()
-		get_tree().change_scene("res://youwin.xscn")
+		if (get_node("/root/globals").current_stage() == 4):
+			get_node("/root/globals").reset()
+			get_tree().change_scene("res://credits.xscn")
+		else:
+			get_tree().change_scene("res://youwin.xscn")
 	
 func _colide_com_brick (body):
+	
 	var tween = get_node ("../Tween")
 	
 	#muda a cor da bola na colisao:
