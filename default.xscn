@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="12" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+<resource_file type="PackedScene" subresource_count="14" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
 	<ext_resource path="res://main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://ball.gd" type="Script"></ext_resource>
 	<ext_resource path="res://Sprites/ball.png" type="Texture"></ext_resource>
 	<ext_resource path="res://label.gd" type="Script"></ext_resource>
+	<ext_resource path="res://combo.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://combo.gd" type="Script"></ext_resource>
 	<ext_resource path="res://bar.gd" type="Script"></ext_resource>
 	<ext_resource path="res://Sprites/bar.png" type="Texture"></ext_resource>
 	<resource type="RectangleShape2D" path="local://1">
@@ -36,9 +38,9 @@
 			<string> "conn_count" </string>
 			<int> 2 </int>
 			<string> "conns" </string>
-			<int_array  len="12"> 				1, 1, 109, 108, 2, 0, 1, 1, 109, 110, 2, 0 </int_array>
+			<int_array  len="12"> 				1, 1, 111, 110, 2, 0, 1, 1, 111, 112, 2, 0 </int_array>
 			<string> "names" </string>
-			<string_array  len="111">
+			<string_array  len="113">
 				<string> "SceneRoot" </string>
 				<string> "Node" </string>
 				<string> "_import_path" </string>
@@ -125,6 +127,8 @@
 				<string> "autowrap" </string>
 				<string> "uppercase" </string>
 				<string> "percent_visible" </string>
+				<string> "Label 2" </string>
+				<string> "custom_fonts/font" </string>
 				<string> "bar" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "collision/margin" </string>
@@ -152,16 +156,16 @@
 				<string> "_colide_com_brick" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 16 </int>
+			<int> 17 </int>
 			<string> "nodes" </string>
-			<int_array  len="672"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 6, 5, -1, 33, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 5, 18, 11, 19, 12, 20, 10, 21, 5, 22, 5, 23, 13, 24, 4, 25, 7, 26, 4, 27, 4, 28, 10, 29, 9, 30, 5, 31, 3, 32, 10, 33, 3, 34, 14, 35, 7, 36, 7, 37, 7, 3, 15, 0, 1, 0, 38, 5, -1, 22, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 39, 16, 40, 3, 41, 14, 42, 10, 43, 10, 44, 5, 45, 5, 46, 9, 47, 17, 48, 10, 49, 18, 4, 19, 0, 1, 0, 51, 50, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 20, 14, 9, 15, 3, 52, 11, 53, 10, 4, 21, 0, 0, 0, 55, 54, -1, 17, 2, 0, 7, 10, 8, 4, 9, 4, 10, 5, 56, 22, 57, 22, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 4, 23, 0, 4, 0, 68, 67, -1, 16, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 56, 24, 57, 25, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 0, 4, 0, 68, 69, -1, 17, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 70, 26, 56, 24, 57, 27, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 0, 0, 0, 71, 71, -1, 32, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 72, 28, 70, 29, 56, 30, 57, 31, 58, 0, 59, 0, 60, 0, 61, 0, 62, 3, 63, 3, 64, 13, 66, 4, 73, 7, 74, 4, 75, 4, 76, 4, 77, 7, 78, 10, 79, 10, 80, 32, 81, 9, 82, 9, 83, 10, 84, 10, 85, 33, 3, 34, 4, 35, 0, 0, 0, 87, 86, -1, 20, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 36, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 5, 18, 37, 19, 38, 20, 10, 21, 5, 22, 5, 88, 39, 3, 40, 4, 41, 0, 8, 0, 38, 86, -1, 22, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 39, 42, 40, 3, 41, 14, 42, 10, 43, 10, 44, 5, 45, 5, 46, 9, 47, 17, 48, 10, 49, 18, 4, 43, 0, 8, 0, 51, 89, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 44, 14, 9, 15, 3, 52, 37, 53, 10, 4, 45, 0, 0, 0, 91, 90, -1, 28, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 46, 18, 47, 19, 48, 20, 10, 92, 49, 93, 50, 94, 10, 95, 51, 96, 52, 97, 10, 21, 5, 22, 5, 98, 14, 99, 7, 25, 4, 26, 4, 4, 53, 0, 11, 0, 51, 100, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 54, 12, 7, 13, 55, 14, 9, 15, 3, 52, 47, 53, 10, 4, 56, 0, 11, 0, 51, 101, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 57, 12, 7, 13, 55, 14, 9, 15, 3, 52, 49, 53, 10, 4, 58, 0, 11, 0, 51, 102, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 59, 12, 7, 13, 60, 14, 9, 15, 3, 52, 51, 53, 10, 4, 61, 0, 0, 0, 103, 103, -1, 5, 2, 0, 104, 5, 105, 10, 106, 10, 107, 4, 0 </int_array>
+			<int_array  len="743"> 				-1, -1, 1, 0, -1, 3, 2, 0, 3, 1, 4, 2, 0, 0, 0, 6, 5, -1, 33, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 5, 18, 11, 19, 12, 20, 10, 21, 5, 22, 5, 23, 13, 24, 4, 25, 7, 26, 4, 27, 4, 28, 10, 29, 9, 30, 5, 31, 3, 32, 10, 33, 3, 34, 14, 35, 7, 36, 7, 37, 7, 3, 15, 0, 1, 0, 38, 5, -1, 22, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 39, 16, 40, 3, 41, 14, 42, 10, 43, 10, 44, 5, 45, 5, 46, 9, 47, 17, 48, 10, 49, 18, 4, 19, 0, 1, 0, 51, 50, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 20, 14, 9, 15, 3, 52, 11, 53, 10, 4, 21, 0, 0, 0, 55, 54, -1, 16, 2, 0, 7, 10, 8, 4, 9, 4, 10, 5, 56, 22, 57, 22, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 0, 4, 0, 68, 67, -1, 16, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 56, 23, 57, 24, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 0, 4, 0, 68, 69, -1, 17, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 70, 25, 56, 23, 57, 26, 58, 0, 59, 0, 60, 0, 61, 0, 62, 10, 63, 10, 64, 13, 65, 13, 66, 4, 0, 0, 0, 71, 71, -1, 32, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 72, 27, 70, 28, 56, 29, 57, 30, 58, 0, 59, 0, 60, 0, 61, 0, 62, 3, 63, 3, 64, 13, 66, 4, 73, 7, 74, 4, 75, 4, 76, 4, 77, 7, 78, 10, 79, 10, 80, 31, 81, 9, 82, 9, 83, 10, 84, 10, 85, 32, 3, 33, 4, 34, 0, 0, 0, 71, 86, -1, 33, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 72, 35, 70, 36, 56, 37, 57, 38, 58, 0, 59, 0, 60, 0, 61, 0, 62, 3, 63, 3, 64, 13, 66, 4, 87, 39, 73, 7, 74, 4, 75, 4, 76, 4, 77, 7, 78, 10, 79, 10, 80, 31, 81, 9, 82, 9, 83, 10, 84, 10, 85, 32, 3, 40, 4, 41, 0, 0, 0, 89, 88, -1, 20, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 42, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 5, 18, 43, 19, 44, 20, 10, 21, 5, 22, 5, 90, 45, 3, 46, 4, 47, 0, 9, 0, 38, 88, -1, 22, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 39, 48, 40, 3, 41, 14, 42, 10, 43, 10, 44, 5, 45, 5, 46, 9, 47, 17, 48, 10, 49, 18, 4, 49, 0, 9, 0, 51, 91, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 50, 14, 9, 15, 3, 52, 43, 53, 10, 4, 51, 0, 0, 0, 93, 92, -1, 28, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 14, 12, 7, 13, 8, 14, 9, 15, 3, 16, 10, 17, 52, 18, 53, 19, 54, 20, 10, 94, 55, 95, 56, 96, 10, 97, 57, 98, 58, 99, 10, 21, 5, 22, 5, 100, 14, 101, 7, 25, 4, 26, 4, 4, 59, 0, 12, 0, 51, 102, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 60, 12, 7, 13, 61, 14, 9, 15, 3, 52, 53, 53, 10, 4, 62, 0, 12, 0, 51, 103, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 63, 12, 7, 13, 61, 14, 9, 15, 3, 52, 55, 53, 10, 4, 64, 0, 12, 0, 51, 104, -1, 13, 2, 0, 7, 3, 8, 4, 9, 4, 10, 5, 11, 65, 12, 7, 13, 66, 14, 9, 15, 3, 52, 57, 53, 10, 4, 67, 0, 0, 0, 105, 105, -1, 5, 2, 0, 106, 5, 107, 10, 108, 10, 109, 4, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="62" shared="false">
+			<array  len="68" shared="false">
 				<node_path> "" </node_path>
 				<resource  resource_type="Script" path="res://main.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -284,13 +288,17 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 6 </int>
 							<string> "sources" </string>
-							<array  len="4" shared="false">
+							<array  len="8" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://label.gd" </string>
 								<string> "res://bar.gd" </string>
+								<string> "res://combo.gd" </string>
+								<string> "res://game_over_score.gd" </string>
+								<string> "res://global.gd" </string>
+								<string> "res://ghost-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
@@ -328,10 +336,6 @@
 					<bool> True </bool>
 				</dictionary>
 				<real> 40 </real>
-				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
-				</dictionary>
 				<real> 159 </real>
 				<real> 131 </real>
 				<real> 135 </real>
@@ -343,6 +347,16 @@
 				<string> "" </string>
 				<real> -1 </real>
 				<resource  resource_type="Script" path="res://label.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 687 </real>
+				<real> 310 </real>
+				<real> 800 </real>
+				<real> 382 </real>
+				<resource  resource_type="Font" path="res://combo.fnt">  </resource>
+				<resource  resource_type="Script" path="res://combo.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>

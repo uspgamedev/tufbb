@@ -16,6 +16,7 @@ var state = {
 	trans = Tween.TRANS_LINEAR,
 	eases = Tween.EASE_IN,
 }
+var combo = 0
 
 func _ready():
 	set_fixed_process(true)
@@ -35,6 +36,8 @@ func _ready():
 	placar.close()
 	
 func _fixed_process(delta):
+	
+	print (combo)
 	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
@@ -102,9 +105,12 @@ func _colide_com_brick (body):
 	
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
+		combo += 1
 		body.hurt()
 		var main = get_node("../")
-		main.score += 100
+		main.score += combo*100
+	elif (body.get_type() == "StaticBody2D"):
+		combo = 0
 	
 	tween.set_repeat(false)
 	tween.start()
