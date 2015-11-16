@@ -21,7 +21,6 @@ func _ready():
 	set_fixed_process(true)
 	
 	random = 100 + randf()*300
-	#set_linear_velocity(Vector2(400 - random, random))
 	set_linear_velocity(Vector2(250, 250))
 	
 	placar.open(file_name, File.READ)
