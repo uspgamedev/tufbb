@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+<resource_file type="PackedScene" subresource_count="5" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
 	<ext_resource path="res://GameOver.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://creditscreen.gd" type="Script"></ext_resource>
+	<ext_resource path="res://menu.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://song.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -9,7 +11,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="37">
+			<string_array  len="44">
 				<string> "SceneRoot" </string>
 				<string> "Node" </string>
 				<string> "_import_path" </string>
@@ -47,13 +49,20 @@
 				<string> "uppercase" </string>
 				<string> "percent_visible" </string>
 				<string> "script/script" </string>
+				<string> "StreamPlayer" </string>
+				<string> "stream/stream" </string>
+				<string> "stream/play" </string>
+				<string> "stream/loop" </string>
+				<string> "stream/volume_db" </string>
+				<string> "stream/autoplay" </string>
+				<string> "stream/paused" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 2 </int>
+			<int> 3 </int>
 			<string> "nodes" </string>
-			<int_array  len="82"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 32, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 0, 15, 0, 16, 0, 17, 0, 18, 2, 19, 2, 20, 9, 21, 3, 22, 10, 23, 11, 24, 12, 25, 3, 26, 12, 27, 11, 28, 13, 29, 13, 30, 14, 31, 4, 32, 15, 33, 13, 34, 13, 35, 16, 36, 17, 0 </int_array>
+			<int_array  len="105"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 5, 4, -1, 32, 2, 0, 6, 2, 7, 3, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 13, 8, 14, 0, 15, 0, 16, 0, 17, 0, 18, 2, 19, 2, 20, 9, 21, 3, 22, 10, 23, 11, 24, 12, 25, 3, 26, 12, 27, 11, 28, 13, 29, 13, 30, 14, 31, 4, 32, 15, 33, 13, 34, 13, 35, 16, 36, 17, 0, 0, 0, 37, 37, -1, 8, 2, 0, 38, 18, 39, 13, 40, 2, 41, 11, 42, 13, 43, 13, 36, 19, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="18" shared="false">
+			<array  len="20" shared="false">
 				<node_path> "" </node_path>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
@@ -213,6 +222,8 @@
 				<int> 0 </int>
 				<real> -1 </real>
 				<resource  resource_type="Script" path="res://creditscreen.gd">  </resource>
+				<resource  resource_type="AudioStream" path="res://menu.ogg">  </resource>
+				<resource  resource_type="Script" path="res://song.gd">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>

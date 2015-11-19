@@ -8,7 +8,8 @@ func _ready():
 	set_fixed_process(true)
 	
 func _fixed_process(delta):
-	print (get_pos().y)
+	if(Input.is_action_pressed("ui_cancel")):
+		get_tree().quit()
 	if (get_pos().y > ini):
 		set_pos(Vector2(get_pos().x, get_pos().y - 1))
 	if (Input.is_action_pressed("ui_accept")):

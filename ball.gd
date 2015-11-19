@@ -37,8 +37,6 @@ func _ready():
 	
 func _fixed_process(delta):
 	
-	print (combo)
-	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
 	
