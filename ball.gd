@@ -78,6 +78,10 @@ func _fixed_process(delta):
 	
 func _colide_com_brick (body):
 	
+	var fx = get_node("../SamplePlayer")
+	
+	fx.ball_fx()
+	
 	var tween = get_node ("../Tween")
 	
 	#muda a cor da bola na colisao:

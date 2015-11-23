@@ -41,6 +41,9 @@ func brickHasDied(points):
 	var brick2 = get_tree().get_nodes_in_group("brick_2hit").size()
 	var brick3 = get_tree().get_nodes_in_group("brick_3hit").size()
 	
+	var fx = get_node("./SamplePlayer")
+	fx.brick_fx()
+	
 	bricks = brick1 + brick2 + brick3
 	
 	placar.open(file_name, File.WRITE)
