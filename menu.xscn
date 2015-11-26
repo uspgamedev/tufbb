@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="9" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+<resource_file type="PackedScene" subresource_count="11" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
 	<ext_resource path="res://menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://menu.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://song.gd" type="Script"></ext_resource>
+	<ext_resource path="res://samplelibrary.res" type="SampleLibrary"></ext_resource>
+	<ext_resource path="res://sound_fx.gd" type="Script"></ext_resource>
 	<ext_resource path="res://Sprites/brickosphere.png" type="Texture"></ext_resource>
 	<ext_resource path="res://brickosphere.gd" type="Script"></ext_resource>
 	<ext_resource path="res://GameOver.fnt" type="Font"></ext_resource>
@@ -15,7 +17,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="69">
+			<string_array  len="84">
 				<string> "SceneRoot" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -37,6 +39,21 @@
 				<string> "stream/volume_db" </string>
 				<string> "stream/autoplay" </string>
 				<string> "stream/paused" </string>
+				<string> "SamplePlayer" </string>
+				<string> "config/voices" </string>
+				<string> "config/samples" </string>
+				<string> "default/volume_db" </string>
+				<string> "default/pitch_scale" </string>
+				<string> "default/pan" </string>
+				<string> "default/depth" </string>
+				<string> "default/height" </string>
+				<string> "default/filter/type" </string>
+				<string> "default/filter/cutoff" </string>
+				<string> "default/filter/resonance" </string>
+				<string> "default/filter/gain" </string>
+				<string> "default/reverb_room" </string>
+				<string> "default/reverb_send" </string>
+				<string> "default/chorus_send" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
 				<string> "centered" </string>
@@ -87,11 +104,11 @@
 				<string> "credits" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 9 </int>
+			<int> 10 </int>
 			<string> "nodes" </string>
-			<int_array  len="371"> 				-1, -1, 1, 0, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 9, 0, 0, 0, 14, 14, -1, 8, 2, 0, 15, 10, 16, 11, 17, 1, 18, 5, 19, 11, 20, 11, 12, 12, 0, 0, 0, 21, 21, -1, 22, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 13, 8, 5, 9, 14, 10, 7, 11, 1, 22, 15, 23, 1, 24, 4, 25, 11, 26, 11, 27, 3, 28, 3, 29, 7, 30, 16, 31, 11, 32, 17, 12, 18, 0, 2, 0, 33, 33, -1, 5, 2, 0, 34, 3, 35, 11, 36, 11, 37, 2, 0, 2, 0, 39, 38, -1, 16, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 40, 19, 41, 19, 42, 0, 43, 0, 44, 0, 45, 0, 46, 11, 47, 11, 48, 20, 49, 20, 50, 2, 0, 4, 0, 52, 51, -1, 16, 2, 0, 3, 11, 4, 2, 5, 2, 6, 3, 40, 21, 41, 22, 42, 0, 43, 0, 44, 0, 45, 0, 46, 11, 47, 11, 48, 20, 49, 20, 50, 2, 0, 4, 0, 52, 53, -1, 17, 2, 0, 3, 11, 4, 2, 5, 2, 6, 3, 54, 23, 40, 21, 41, 24, 42, 0, 43, 0, 44, 0, 45, 0, 46, 11, 47, 11, 48, 20, 49, 20, 50, 2, 0, 0, 0, 56, 55, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 57, 25, 54, 26, 40, 27, 41, 28, 42, 0, 43, 0, 44, 0, 45, 0, 46, 11, 47, 1, 48, 20, 49, 20, 50, 2, 58, 29, 59, 11, 60, 11, 61, 11, 62, 11, 63, 30, 64, 31, 65, 11, 66, 11, 67, 3, 12, 32, 0, 0, 0, 56, 68, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 57, 25, 54, 33, 40, 27, 41, 34, 42, 0, 43, 0, 44, 0, 45, 0, 46, 11, 47, 1, 48, 20, 49, 20, 50, 2, 58, 29, 59, 11, 60, 11, 61, 11, 62, 11, 63, 35, 64, 31, 65, 11, 66, 11, 67, 3, 12, 36, 0 </int_array>
+			<int_array  len="412"> 				-1, -1, 1, 0, -1, 12, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 1, 12, 8, 13, 9, 0, 0, 0, 14, 14, -1, 8, 2, 0, 15, 10, 16, 11, 17, 1, 18, 5, 19, 11, 20, 11, 12, 12, 0, 0, 0, 21, 21, -1, 16, 2, 0, 22, 3, 23, 13, 24, 5, 25, 2, 26, 5, 27, 5, 28, 5, 29, 14, 30, 14, 31, 14, 32, 14, 33, 15, 34, 5, 35, 5, 12, 16, 0, 0, 0, 36, 36, -1, 23, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 18, 10, 7, 11, 1, 37, 19, 38, 1, 39, 4, 40, 11, 41, 11, 42, 3, 43, 3, 44, 7, 45, 20, 46, 11, 47, 21, 12, 22, 13, 23, 0, 3, 0, 48, 48, -1, 5, 2, 0, 49, 3, 50, 11, 51, 11, 52, 2, 0, 3, 0, 54, 53, -1, 16, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 55, 24, 56, 24, 57, 0, 58, 0, 59, 0, 60, 0, 61, 11, 62, 11, 63, 15, 64, 15, 65, 2, 0, 5, 0, 67, 66, -1, 16, 2, 0, 3, 11, 4, 2, 5, 2, 6, 3, 55, 25, 56, 26, 57, 0, 58, 0, 59, 0, 60, 0, 61, 11, 62, 11, 63, 15, 64, 15, 65, 2, 0, 5, 0, 67, 68, -1, 17, 2, 0, 3, 11, 4, 2, 5, 2, 6, 3, 69, 27, 55, 25, 56, 28, 57, 0, 58, 0, 59, 0, 60, 0, 61, 11, 62, 11, 63, 15, 64, 15, 65, 2, 0, 0, 0, 71, 70, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 72, 29, 69, 30, 55, 31, 56, 32, 57, 0, 58, 0, 59, 0, 60, 0, 61, 11, 62, 1, 63, 15, 64, 15, 65, 2, 73, 33, 74, 11, 75, 11, 76, 11, 77, 11, 78, 34, 79, 35, 80, 11, 81, 11, 82, 3, 12, 36, 0, 0, 0, 71, 83, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 72, 29, 69, 37, 55, 31, 56, 38, 57, 0, 58, 0, 59, 0, 60, 0, 61, 11, 62, 1, 63, 15, 64, 15, 65, 2, 73, 33, 74, 11, 75, 11, 76, 11, 77, 11, 78, 39, 79, 35, 80, 11, 81, 11, 82, 3, 12, 40, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="37" shared="false">
+			<array  len="41" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -103,7 +120,7 @@
 				<resource  resource_type="Script" path="res://menu.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -226,9 +243,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 5 </int>
 							<string> "sources" </string>
-							<array  len="7" shared="false">
+							<array  len="10" shared="false">
 								<string> "res://gameover.gd" </string>
 								<string> "res://home-run.gd" </string>
 								<string> "res://brickosphere.gd" </string>
@@ -236,6 +253,9 @@
 								<string> "res://ball.gd" </string>
 								<string> "res://credits.gd" </string>
 								<string> "res://menu.gd" </string>
+								<string> "res://global.gd" </string>
+								<string> "res://sound_fx.gd" </string>
+								<string> "res://main.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
@@ -250,14 +270,21 @@
 				<resource  resource_type="AudioStream" path="res://menu.ogg">  </resource>
 				<bool> False </bool>
 				<resource  resource_type="Script" path="res://song.gd">  </resource>
+				<resource  resource_type="SampleLibrary" path="res://samplelibrary.res">  </resource>
+				<nil>  </nil>
+				<int> 2 </int>
+				<resource  resource_type="Script" path="res://sound_fx.gd">  </resource>
 				<vector2> 391.4, 139.5 </vector2>
 				<vector2> 0.7, 0.7 </vector2>
 				<resource  resource_type="Texture" path="res://Sprites/brickosphere.png">  </resource>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
 				<resource  resource_type="Script" path="res://brickosphere.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
 				<real> 40 </real>
-				<int> 2 </int>
 				<real> 159 </real>
 				<real> 131 </real>
 				<real> 135 </real>
