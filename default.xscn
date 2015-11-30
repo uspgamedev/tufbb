@@ -183,7 +183,7 @@
 				<resource  resource_type="Script" path="res://main.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -306,7 +306,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="10" shared="false">
 								<string> "res://ball.gd" </string>
@@ -338,7 +338,7 @@
 				<int> 2 </int>
 				<resource  resource_type="Script" path="res://sound_fx.gd">  </resource>
 				<bool> True </bool>
-				<vector2> 12, 312 </vector2>
+				<vector2> 400, 312 </vector2>
 				<vector2> 1, 1 </vector2>
 				<int> 0 </int>
 				<bool> False </bool>
@@ -347,7 +347,7 @@
 				<vector2> 0, 0 </vector2>
 				<resource  resource_type="Script" path="res://ball.gd">  </resource>
 				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
+					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://Sprites/ball.png">  </resource>
@@ -393,15 +393,13 @@
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
-				<vector2> 372, 572 </vector2>
+				<vector2> 400, 572 </vector2>
 				<resource  resource_type="Shape2D" path="local://2">  </resource>
 				<matrix32> 6, -0, 0, 0.5, 0, 0 </matrix32>
 				<real> 0.08 </real>
 				<resource  resource_type="Script" path="res://bar.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>
-					<bool> True </bool>
-					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://Sprites/bar.png">  </resource>

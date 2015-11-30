@@ -21,7 +21,8 @@ var combo = 0
 func _ready():
 	set_fixed_process(true)
 	
-	set_linear_velocity(Vector2(250, 250))
+	var random = 200*randf() - 100
+	set_linear_velocity(Vector2(random, 250))
 	
 	placar.open(file_name, File.READ)
 	if placar.is_open():
