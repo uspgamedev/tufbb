@@ -66,7 +66,7 @@
 				<node_path> "" </node_path>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -216,9 +216,9 @@
 				<int> 2 </int>
 				<resource  resource_type="Font" path="res://GameOver.fnt">  </resource>
 				<real> 0 </real>
-				<real> 83 </real>
+				<real> 84 </real>
 				<bool> False </bool>
-				<string> "&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;Producers:&#000a;&#000a;Victor Domiciano&#000a;Andre Nakazawa&#000a;Isabela Blucher&#000a;&#000a;&#000a;&#000a;Developers:&#000a;&#000a;Victor Domiciano&#000a;Andre Nakazawa&#000a;Isabela Blucher&#000a;Andre Ferrari&#000a;Nicholas Lima&#000a;&#000a;&#000a;&#000a;Art:&#000a;&#000a;Victor Domiciano&#000a;Adamastor&#000a;&#000a;&#000a;&#000a;Images:&#000a;&#000a;Miguel.v&#000a;Derek Keats&#000a;European Southern Observatory&#000a;Michael Krause&#000a;bittbox&#000a;&#000a;&#000a;&#000a;Music:&#000a;&#000a;lewk&#000a;kickhat&#000a;Broke For Free&#000a;Psychadelik Pedestrian&#000a;&#000a;&#000a;&#000a;Sound Effects:&#000a;&#000a;AlienXXX&#000a;acclivity&#000a;&#000a;&#000a;&#000a;Special Thanks:&#000a;&#000a;Vinicius Daros&#000a;Wilson Mizutani&#000a;&#000a;&#000a;&#000a;Thanks to:&#000a;&#000a;The USPGameDev Team&#000a;All the people at LabX&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;Press &apos;Space&apos; to return &#000a;to the menu" </string>
+				<string> "&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;Producers:&#000a;&#000a;Victor Domiciano&#000a;Andre Nakazawa&#000a;Isabela Blucher&#000a;&#000a;&#000a;&#000a;Developers:&#000a;&#000a;Victor Domiciano&#000a;Andre Nakazawa&#000a;Isabela Blucher&#000a;Andre Ferrari&#000a;Nicholas Lima&#000a;&#000a;&#000a;&#000a;Art:&#000a;&#000a;Victor Domiciano&#000a;Adamastor&#000a;&#000a;&#000a;&#000a;Images:&#000a;&#000a;Miguel.v&#000a;Derek Keats&#000a;European Southern Observatory&#000a;Michael Krause&#000a;bittbox&#000a;&#000a;&#000a;&#000a;Music:&#000a;&#000a;lewk&#000a;kickhat&#000a;Broke For Free&#000a;Psychadelik Pedestrian&#000a;&#000a;&#000a;&#000a;Sound Effects:&#000a;&#000a;AlienXXX&#000a;acclivity&#000a;altemark&#000a;&#000a;&#000a;&#000a;Special Thanks:&#000a;&#000a;Vinicius Daros&#000a;Wilson Mizutani&#000a;&#000a;&#000a;&#000a;Thanks to:&#000a;&#000a;The USPGameDev Team&#000a;All the people at LabX&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;&#000a;Press &apos;Space&apos; to return &#000a;to the menu" </string>
 				<int> 0 </int>
 				<real> -1 </real>
 				<resource  resource_type="Script" path="res://creditscreen.gd">  </resource>

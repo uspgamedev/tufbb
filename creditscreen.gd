@@ -4,7 +4,7 @@ extends Label
 var ini
 
 func _ready():
-	ini = - (get_end().y - 300)
+	ini = - (get_end().y - 280)
 	set_fixed_process(true)
 	
 func _fixed_process(delta):
