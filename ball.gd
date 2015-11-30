@@ -21,7 +21,6 @@ var combo = 0
 func _ready():
 	set_fixed_process(true)
 	
-	random = 100 + randf()*300
 	set_linear_velocity(Vector2(250, 250))
 	
 	placar.open(file_name, File.READ)
@@ -111,6 +110,10 @@ func _colide_com_brick (body):
 		body.hurt()
 		var main = get_node("../")
 		main.score += combo*100
+		
+		var label = get_node("../Label")
+		label.sinaliza()
+		
 	elif (body.get_type() == "StaticBody2D"):
 		combo = 0
 	

@@ -51,3 +51,6 @@ func brickHasDied(points):
 	placar.store_32(score)
 	placar.close()
 	
+	var label = get_node("Label")
+	label.sinaliza()
+	
