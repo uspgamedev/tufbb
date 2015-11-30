@@ -61,3 +61,4 @@ func hurt():
 	
 	tween.set_repeat(false)
 	tween.start()
+	

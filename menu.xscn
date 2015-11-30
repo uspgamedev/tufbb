@@ -120,7 +120,7 @@
 				<resource  resource_type="Script" path="res://menu.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -243,9 +243,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 9 </int>
+							<int> 13 </int>
 							<string> "sources" </string>
-							<array  len="10" shared="false">
+							<array  len="15" shared="false">
 								<string> "res://gameover.gd" </string>
 								<string> "res://home-run.gd" </string>
 								<string> "res://brickosphere.gd" </string>
@@ -256,6 +256,11 @@
 								<string> "res://global.gd" </string>
 								<string> "res://sound_fx.gd" </string>
 								<string> "res://main.gd" </string>
+								<string> "res://green-brick.gd" </string>
+								<string> "res://yellow-brick.gd" </string>
+								<string> "res://ghost-brick.gd" </string>
+								<string> "res://moving-brick.gd" </string>
+								<string> "res://red-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
