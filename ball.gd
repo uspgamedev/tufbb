@@ -115,7 +115,7 @@ func _colide_com_brick (body):
 		var label = get_node("../Label")
 		label.sinaliza()
 		
-	elif (body.get_type() == "StaticBody2D"):
+	elif (body.get_type() == "StaticBody2D" and body.get_filename() != "res://blue-brick.xscn" and body.get_name() != "margin-up"):
 		combo = 0
 	
 	tween.set_repeat(false)
