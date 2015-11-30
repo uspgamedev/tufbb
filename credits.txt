@@ -20,7 +20,9 @@ menu: http://freemusicarchive.org/music/Psychadelik_Pedestrian/Fifteen/02_-_Psyc
 
 Sound FX:
 
-ball: https://freesound.org/people/AlienXXX/sounds/196223/
+ball: LMMS
 
 brick fall: https://freesound.org/people/acclivity/sounds/25884/
+
+beep: altemark
 

@@ -13,7 +13,7 @@ func _init():
 	
 func next_scene():
 	if (stage == 1):
-		return load("res://stage-3.xscn")
+		return load("res://stage-1.xscn")
 	elif (stage == 2):
 		return load("res://stage-2.xscn")
 	elif (stage == 3):
