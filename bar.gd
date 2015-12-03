@@ -10,6 +10,8 @@ var deltavel = 0
 func _ready():
 	set_fixed_process(true)
 	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	var tween = get_node("../Tween")
 	var posicao = get_pos()
 	

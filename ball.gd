@@ -101,6 +101,10 @@ func _colide_com_brick (body):
 	tween.interpolate_method(sprite, "set_scale", Vector2(1, 1), Vector2(1.5, 1.5), 0, state.trans, state.eases)
 	tween.interpolate_property(sprite, "transform/scale", Vector2(1.5, 1.5), Vector2(1, 1), 0.5, state.trans, state.eases, 0)
 	
+	var fx = get_node("../SamplePlayer")
+	
+	fx.ball_fx(combo)
+	
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
 		combo += 1
@@ -113,10 +117,6 @@ func _colide_com_brick (body):
 		
 	elif (body.get_type() == "StaticBody2D" and body.get_filename() != "res://blue-brick.xscn" and body.get_name() != "margin-up"):
 		combo = 0
-	
-	var fx = get_node("../SamplePlayer")
-	
-	fx.ball_fx(combo)
 	
 	tween.set_repeat(false)
 	tween.start()

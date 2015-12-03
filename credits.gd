@@ -8,6 +8,7 @@ func _ready():
 	
 func _fixed_process(delta):
 	if (is_pressed()):
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		get_tree().change_scene("res://credits.xscn")
 		
 	if (is_hovered() and not hover):

@@ -243,24 +243,17 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 13 </int>
+							<int> 5 </int>
 							<string> "sources" </string>
-							<array  len="15" shared="false">
-								<string> "res://gameover.gd" </string>
-								<string> "res://home-run.gd" </string>
-								<string> "res://brickosphere.gd" </string>
-								<string> "res://press2play.gd" </string>
+							<array  len="8" shared="false">
 								<string> "res://ball.gd" </string>
-								<string> "res://credits.gd" </string>
-								<string> "res://menu.gd" </string>
 								<string> "res://global.gd" </string>
 								<string> "res://sound_fx.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://green-brick.gd" </string>
-								<string> "res://yellow-brick.gd" </string>
-								<string> "res://ghost-brick.gd" </string>
-								<string> "res://moving-brick.gd" </string>
-								<string> "res://red-brick.gd" </string>
+								<string> "res://bar.gd" </string>
+								<string> "res://credits.gd" </string>
+								<string> "res://press2play.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
