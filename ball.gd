@@ -57,7 +57,7 @@ func _fixed_process(delta):
 		main.score *= 0.7 + randf()*0.1
 		placar.store_32(main.score)
 		placar.close()
-		get_tree().change_scene("res://gameover.xscn")
+		get_tree().change_scene("res://congratulations.xscn")
 	
 	var main = get_node("../")
 	
@@ -72,7 +72,7 @@ func _fixed_process(delta):
 		get_node("/root/globals").sum_stage()
 		if (get_node("/root/globals").current_stage() == 4):
 			get_node("/root/globals").reset()
-			get_tree().change_scene("res://credits.xscn")
+			get_tree().change_scene("res://congratulations.xscn")
 		else:
 			get_tree().change_scene("res://youwin.xscn")
 	
