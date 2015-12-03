@@ -304,7 +304,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 6 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="10" shared="false">
 								<string> "res://ball.gd" </string>

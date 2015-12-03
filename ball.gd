@@ -57,7 +57,7 @@ func _fixed_process(delta):
 		main.score *= 0.7 + randf()*0.1
 		placar.store_32(main.score)
 		placar.close()
-		get_tree().change_scene("res://congratulations.xscn")
+		get_tree().change_scene("res://gameover.xscn")
 	
 	var main = get_node("../")
 	

@@ -18,8 +18,8 @@ func _process(delta):
 		get_tree().quit()
 	
 	if (move == true and label_score.get_end().y >= 0):
-		label.set_pos(Vector2(label.get_pos().x, label.get_pos().y - 1))
-		label_score.set_pos(Vector2(label_score.get_pos().x, label_score.get_pos().y - 1))
+		label.set_pos(Vector2(label.get_pos().x, label.get_pos().y - 2))
+		label_score.set_pos(Vector2(label_score.get_pos().x, label_score.get_pos().y - 2))
 	
 	if (label_score.get_end().y < 0):
 		get_tree().change_scene("res://credits.xscn")
