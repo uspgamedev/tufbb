@@ -37,26 +37,19 @@ func _fixed_process(delta):
 	label.set_text(str("Score: ", score))
 	
 func _input(event):
-	if (event.is_action("ui_teste") and !event.is_pressed()):
-		Input.warp_mouse_pos(Vector2(100, 100))
 	if (event.is_action("ui_cancel") and !event.is_pressed()):
 		var bar = get_node("bar")
 		if (!get_tree().is_paused()):
-			print ("mouse1 ", get_viewport().get_mouse_pos())
-			print ("barra1 ", bar.get_pos())
 			get_tree().set_pause(true)
 			bar.set_fixed_process(false)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			var stretch = OS.get_video_mode_size().y / get_viewport().get_rect().end.y
 			var black = (OS.get_video_mode_size().x - stretch*get_viewport().get_rect().end.x) / 2
-			print (stretch)
 			get_tree().set_pause(false)
 			bar.set_fixed_process(true)
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			Input.warp_mouse_pos(Vector2(black + stretch*bar.get_pos().x, stretch*bar.get_pos().y))
-			print ("mouse2 ", get_viewport().get_mouse_pos())
-			print ("barra2 ", bar.get_pos())
 			
 	
 func brickHasDied(points):

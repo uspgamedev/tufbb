@@ -43,3 +43,14 @@ func _fixed_process(delta):
 	
 	if (get_viewport().get_mouse_pos().x > rect.end.x - tamanho.x/2):
 		set_pos (Vector2 (rect.end.x - tamanho.x/2, posicao.y))
+	
+	#correcao do mouse saindo da tela:
+	
+	var stretch = OS.get_video_mode_size().y / get_viewport().get_rect().end.y
+	var black = (OS.get_video_mode_size().x - stretch*get_viewport().get_rect().end.x) / 2
+	
+	if (get_viewport().get_mouse_pos().x < rect.pos.x + tamanho.x/2):
+		Input.warp_mouse_pos(Vector2(rect.pos.x + black + stretch*tamanho.x/2, OS.get_video_mode_size().y/2))
+	
+	if (get_viewport().get_mouse_pos().x > rect.end.x - tamanho.x/2):
+		Input.warp_mouse_pos(Vector2(OS.get_video_mode_size().x - stretch*tamanho.x/2 - black, OS.get_video_mode_size().y/2))
