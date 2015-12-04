@@ -9,6 +9,7 @@ var score
 var placar = File.new()
 var stretch
 var black
+var flag = 1
 
 func _ready():
 	set_process_input(true)
@@ -33,14 +34,21 @@ func _ready():
 	
 	bricks = brick1 + 2*brick2 + 3*brick3
 	
+func _fixed_process(delta):
+	
 	stretch = OS.get_video_mode_size().y / get_viewport().get_rect().end.y
 	black = (OS.get_video_mode_size().x - stretch*get_viewport().get_rect().end.x) / 2
-	
-func _fixed_process(delta):
+	if (black < 0):
+		black = 0
 	
 	var label = get_node("Label")
 	label.set_text(str("Score: ", score))
 	
+	if (flag == 1):
+		corrige_mouse()
+	flag = 1
+	
+func corrige_mouse():
 	#correcao do mouse saindo da tela:
 	
 	var bar = get_node("bar")
@@ -56,15 +64,18 @@ func _input(event):
 		var bar = get_node("bar")
 		if (!get_tree().is_paused()):
 			get_tree().set_pause(true)
+			set_fixed_process(false)
 			bar.set_fixed_process(false)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			var bar_pos = bar.get_pos()
 			get_tree().set_pause(false)
+			set_fixed_process(true)
 			bar.set_fixed_process(true)
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 			Input.warp_mouse_pos(Vector2(black + stretch*bar_pos.x, stretch*bar_pos.y))
 			bar.set_pos(Vector2(black + stretch*bar_pos.x, bar_pos.y))
+			flag = 0
 	
 func brickHasDied(points):
 	var brick1 = get_tree().get_nodes_in_group("brick_1hit").size()

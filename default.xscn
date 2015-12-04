@@ -167,9 +167,9 @@
 				<string> "playback/active" </string>
 				<string> "playback/repeat" </string>
 				<string> "playback/speed" </string>
-				<string> "_colide_com_barra" </string>
-				<string> "body_enter" </string>
 				<string> "_colide_com_brick" </string>
+				<string> "body_enter" </string>
+				<string> "_colide_com_barra" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 19 </int>
@@ -304,7 +304,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 6 </int>
 							<string> "sources" </string>
 							<array  len="10" shared="false">
 								<string> "res://ball.gd" </string>
@@ -316,7 +316,7 @@
 								<string> "res://global.gd" </string>
 								<string> "res://ghost-brick.gd" </string>
 								<string> "res://sound_fx.gd" </string>
-								<string> "res://yellow-brick.gd" </string>
+								<string> "res://green-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>

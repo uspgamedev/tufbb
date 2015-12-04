@@ -6,17 +6,18 @@ var tamanho = Vector2 (16, 16)
 var esquerda
 var cima
 var baixo
-var cont = 0
 var file_name = "res://placar"
 var score
 var placar = File.new()
 var random
-var velocidade = Vector2 (1, 1)
 var state = {
 	trans = Tween.TRANS_LINEAR,
 	eases = Tween.EASE_IN,
 }
 var combo = 0
+var cont = 0
+var vel
+var cont2 = 0
 
 func _ready():
 	set_fixed_process(true)
@@ -36,6 +37,10 @@ func _ready():
 	placar.close()
 	
 func _fixed_process(delta):
+	if (get_friction() == 0.1):
+		cont2 += 1
+		if (cont2 == 120):
+			set_friction(0)
 	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
@@ -105,6 +110,9 @@ func _colide_com_brick (body):
 	
 	fx.ball_fx(combo)
 	
+	if (body.get_type() != "KinematicBody2D"):
+		cont += 1
+	print (cont)
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
 		combo += 1
@@ -117,6 +125,10 @@ func _colide_com_brick (body):
 		
 	elif (body.get_type() == "StaticBody2D" and body.get_filename() != "res://blue-brick.xscn" and body.get_name() != "margin-up"):
 		combo = 0
+		
+	if (body.get_filename() == "res://blue-brick.xscn" and cont >= 10):
+		print ("correcao")
+		set_friction(0.1)
 	
 	tween.set_repeat(false)
 	tween.start()
@@ -124,9 +136,10 @@ func _colide_com_brick (body):
 func _colide_com_barra(body):
 	var coef = 10
 	var bar = get_node("../bar")
-	var vel = get_linear_velocity()
+	vel = get_linear_velocity()
 	if (baixo < bar.baixo):
 		if (body.get_type() == "KinematicBody2D"):
+			cont = 0
 			if (vel.y < 500):
 				if ((vel.x > 0 and bar.deltavel > 0) or (vel.x < 0 and bar.deltavel < 0)):
 					set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -1.2*vel.y))

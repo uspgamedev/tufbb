@@ -14,8 +14,6 @@ func _ready():
 	var tween = get_node("../Tween")
 	var posicao = get_pos()
 	
-	#tween.interpolate_method(self, "set_pos", Vector2(posicao.x, posicao.y - 200), self.get_pos(), 1, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
-	
 	tween.set_repeat(false)
 	tween.start()
 
