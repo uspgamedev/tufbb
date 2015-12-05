@@ -62,11 +62,17 @@ func corrige_mouse():
 func _input(event):
 	if (event.is_action("ui_cancel") and !event.is_pressed()):
 		var bar = get_node("bar")
+		var bg = get_node("pause_background")
+		var resume = get_node("resume")
+		var quit = get_node("quit")
 		if (!get_tree().is_paused()):
 			get_tree().set_pause(true)
 			set_fixed_process(false)
 			bar.set_fixed_process(false)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			bg.set_opacity(0.5)
+			resume.show()
+			quit.show()
 		else:
 			var bar_pos = bar.get_pos()
 			get_tree().set_pause(false)
@@ -76,6 +82,22 @@ func _input(event):
 			Input.warp_mouse_pos(Vector2(black + stretch*bar_pos.x, stretch*bar_pos.y))
 			bar.set_pos(Vector2(black + stretch*bar_pos.x, bar_pos.y))
 			flag = 0
+			bg.set_opacity(0)
+			resume.hide()
+			quit.hide()
+	
+func resume():
+	var bar = get_node("bar")
+	var bg = get_node("pause_background")
+	var bar_pos = bar.get_pos()
+	var quit = get_node("quit")
+	get_tree().set_pause(false)
+	set_fixed_process(true)
+	bar.set_fixed_process(true)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.warp_mouse_pos(Vector2(black + stretch*bar_pos.x, stretch*bar_pos.y))
+	bg.set_opacity(0)
+	quit.hide()
 	
 func brickHasDied(points):
 	var brick1 = get_tree().get_nodes_in_group("brick_1hit").size()

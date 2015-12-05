@@ -7,7 +7,7 @@ var score
 var placar = File.new()
 
 func _init():
-	#OS.set_window_fullscreen(true)
+	OS.set_window_fullscreen(true)
 	placar.open(file_name, File.WRITE)
 	placar.store_32(0)
 	placar.close()

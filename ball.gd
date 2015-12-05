@@ -121,7 +121,9 @@ func _colide_com_brick (body):
 		
 	elif (body.get_type() == "StaticBody2D" and body.get_filename() != "res://blue-brick.xscn" and body.get_name() != "margin-up"):
 		combo = 0
-		
+	
+	#debug do loop infinito da bola:
+	
 	if (body.get_filename() == "res://blue-brick.xscn" and cont >= 10):
 		vel = get_linear_velocity()
 		if (vel.x > 0):
