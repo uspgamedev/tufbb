@@ -37,10 +37,6 @@ func _ready():
 	placar.close()
 	
 func _fixed_process(delta):
-	if (get_friction() == 0.1):
-		cont2 += 1
-		if (cont2 == 120):
-			set_friction(0)
 	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
@@ -112,7 +108,7 @@ func _colide_com_brick (body):
 	
 	if (body.get_type() != "KinematicBody2D"):
 		cont += 1
-	print (cont)
+	
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
 		combo += 1
@@ -127,8 +123,11 @@ func _colide_com_brick (body):
 		combo = 0
 		
 	if (body.get_filename() == "res://blue-brick.xscn" and cont >= 10):
-		print ("correcao")
-		set_friction(0.1)
+		vel = get_linear_velocity()
+		if (vel.x > 0):
+			set_applied_force(Vector2(10, 0))
+		else:
+			set_applied_force(Vector2(-10, 0))
 	
 	tween.set_repeat(false)
 	tween.start()
