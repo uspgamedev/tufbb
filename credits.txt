@@ -22,7 +22,5 @@ Sound FX:
 
 ball: LMMS
 
-brick fall: https://freesound.org/people/acclivity/sounds/25884/
-
 beep: altemark
 

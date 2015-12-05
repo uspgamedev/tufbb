@@ -245,7 +245,7 @@
 							<string> "current" </string>
 							<int> 1 </int>
 							<string> "sources" </string>
-							<array  len="10" shared="false">
+							<array  len="11" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://global.gd" </string>
 								<string> "res://sound_fx.gd" </string>
@@ -256,6 +256,7 @@
 								<string> "res://press2play.gd" </string>
 								<string> "res://moving-brick.gd" </string>
 								<string> "res://ghost-brick.gd" </string>
+								<string> "res://song.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>

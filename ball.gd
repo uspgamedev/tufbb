@@ -38,6 +38,12 @@ func _ready():
 	
 func _fixed_process(delta):
 	
+	if (get_applied_force().x != 0):
+		cont2 += 1
+		if (cont2 >= 120):
+			cont2 = 0
+			set_applied_force(Vector2(0, 0))
+	
 	var rect = get_viewport().get_rect()
 	posicao = get_pos()
 	
@@ -102,10 +108,6 @@ func _colide_com_brick (body):
 	tween.interpolate_method(sprite, "set_scale", Vector2(1, 1), Vector2(1.5, 1.5), 0, state.trans, state.eases)
 	tween.interpolate_property(sprite, "transform/scale", Vector2(1.5, 1.5), Vector2(1, 1), 0.5, state.trans, state.eases, 0)
 	
-	var fx = get_node("../SamplePlayer")
-	
-	fx.ball_fx(combo)
-	
 	if (body.get_type() != "KinematicBody2D"):
 		cont += 1
 	
@@ -121,15 +123,24 @@ func _colide_com_brick (body):
 		
 	elif (body.get_type() == "StaticBody2D" and body.get_filename() != "res://blue-brick.xscn" and body.get_name() != "margin-up"):
 		combo = 0
+		
+	var fx = get_node("../SamplePlayer")
+	fx.ball_fx(combo)
 	
 	#debug do loop infinito da bola:
 	
-	if (body.get_filename() == "res://blue-brick.xscn" and cont >= 10):
+	if (body.get_filename() == "res://blue-brick.xscn"):
 		vel = get_linear_velocity()
-		if (vel.x > 0):
-			set_applied_force(Vector2(10, 0))
-		else:
-			set_applied_force(Vector2(-10, 0))
+		if (cont >= 10 and cont < 50):
+			if (vel.x > 0):
+				set_applied_force(Vector2(10, 0))
+			else:
+				set_applied_force(Vector2(-5, 0))
+		elif (cont >= 50):
+			if (vel.x > 0):
+				set_applied_force(Vector2(50, 0))
+			else:
+				set_applied_force(Vector2(-25, 0))
 	
 	tween.set_repeat(false)
 	tween.start()

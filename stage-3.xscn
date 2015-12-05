@@ -255,13 +255,14 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
-							<array  len="4" shared="false">
+							<array  len="5" shared="false">
 								<string> "res://moving-brick.gd" </string>
 								<string> "res://ghost-brick.gd" </string>
 								<string> "res://ball.gd" </string>
 								<string> "res://global.gd" </string>
+								<string> "res://song.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
