@@ -17,21 +17,23 @@ func _ready():
 	ini = self.get_pos().x
 	
 func _fixed_process(delta):
-	if (life <= 0):
-		cont += 1
-		if (cont == 30):
-			queue_free()
-	else:
-		var random = randi() % 500
-		if (cont2 == 120):
-			aparece()
-			cont2 = 0
-		elif (random == 0 and cont2 == 0):
-			desaparece()
-			cont2 = 1
 	
-	if (cont2 >= 1):
-		cont2 = (cont2 + 1) % 121
+	if(!get_tree().is_paused()):
+		if (life <= 0):
+			cont += 1
+			if (cont == 30):
+				queue_free()
+		else:
+			var random = randi() % 500
+			if (cont2 == 120):
+				aparece()
+				cont2 = 0
+			elif (random == 0 and cont2 == 0):
+				desaparece()
+				cont2 = 1
+		
+		if (cont2 >= 1):
+			cont2 = (cont2 + 1) % 121
 	
 func hurt():
 	life -= 1

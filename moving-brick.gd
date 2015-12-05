@@ -25,45 +25,46 @@ func _ready():
 	ini = get_pos()
 	
 func _fixed_process (delta):
-
-	var tween = get_node ("Tween")
-	var temp = 1
 	
-	if (life <= 0):
-		cont += 1
-		if (cont == 30):
-			queue_free()
-	else:
-		var random = randi() % 100
-		if (cont3 == 30*temp2):
-			aparece()
-			cont3 = 0
-		elif (random == 0 and cont3 == 0):
-			desaparece()
-			cont3 = 1
-			temp2 = 2 + randi() % 5
-	
-	if (cont3 >= 1):
-		cont3 = (cont3 + 1) % (30*temp2 + 1)
-	
-	if (cont2 == 0 and cont3 == 0):
-		var posicao = Vector2(self.get_pos().x + (randi()%321)-160, (self.get_pos().y + randi()%91)-45)
-		if (posicao.x < ini.x):
-			posicao.x = self.get_pos().x + (randi()%321)
-		elif (posicao.x > ini.x + 320):
-			posicao.x = self.get_pos().x - (randi()%321)
-		if (posicao.y < ini.y):
-			posicao.y = self.get_pos().y + (randi()%91)
-		elif (posicao.y > ini.y + 90):
-			posicao.y = self.get_pos().y - (randi()%91)
-		temp = 2 + randi() % 4
-		tween.interpolate_method(self, "set_pos", self.get_pos(), posicao, temp, Tween.TRANS_ELASTIC, Tween.EASE_OUT_IN)
-		cont2 = 1
-	elif (cont3 == 0):
-		cont2 = (cont2 + 1) % (temp*60)
-	
-	tween.set_repeat(false)
-	tween.start()
+	if (!get_tree().is_paused()):
+		var tween = get_node ("Tween")
+		var temp = 1
+		
+		if (life <= 0):
+			cont += 1
+			if (cont == 30):
+				queue_free()
+		else:
+			var random = randi() % 100
+			if (cont3 == 30*temp2):
+				aparece()
+				cont3 = 0
+			elif (random == 0 and cont3 == 0):
+				desaparece()
+				cont3 = 1
+				temp2 = 2 + randi() % 5
+		
+		if (cont3 >= 1):
+			cont3 = (cont3 + 1) % (30*temp2 + 1)
+		
+		if (cont2 == 0 and cont3 == 0):
+			var posicao = Vector2(self.get_pos().x + (randi()%321)-160, (self.get_pos().y + randi()%91)-45)
+			if (posicao.x < ini.x):
+				posicao.x = self.get_pos().x + (randi()%321)
+			elif (posicao.x > ini.x + 320):
+				posicao.x = self.get_pos().x - (randi()%321)
+			if (posicao.y < ini.y):
+				posicao.y = self.get_pos().y + (randi()%91)
+			elif (posicao.y > ini.y + 90):
+				posicao.y = self.get_pos().y - (randi()%91)
+			temp = 2 + randi() % 4
+			tween.interpolate_method(self, "set_pos", self.get_pos(), posicao, temp, Tween.TRANS_ELASTIC, Tween.EASE_OUT_IN)
+			cont2 = 1
+		elif (cont3 == 0):
+			cont2 = (cont2 + 1) % (temp*60)
+		
+		tween.set_repeat(false)
+		tween.start()
 	
 func hurt():
 	life -= 1

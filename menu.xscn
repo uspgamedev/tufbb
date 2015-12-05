@@ -243,9 +243,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 5 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
-							<array  len="8" shared="false">
+							<array  len="10" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://global.gd" </string>
 								<string> "res://sound_fx.gd" </string>
@@ -254,6 +254,8 @@
 								<string> "res://bar.gd" </string>
 								<string> "res://credits.gd" </string>
 								<string> "res://press2play.gd" </string>
+								<string> "res://moving-brick.gd" </string>
+								<string> "res://ghost-brick.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>
