@@ -72,7 +72,9 @@ func _input(event):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			bg.set_opacity(0.5)
 			resume.show()
+			resume.tween()
 			quit.show()
+			quit.tween()
 		else:
 			var bar_pos = bar.get_pos()
 			get_tree().set_pause(false)

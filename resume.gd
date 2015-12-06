@@ -21,3 +21,11 @@ func _input_event(event):
 		hide()
 		main.resume()
 	
+func tween():
+	var tween = get_node("../Tween")
+	
+	tween.interpolate_method(self, "set_pos", Vector2(800, 210), Vector2(226, 210), 1, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	
+	tween.set_repeat(false)
+	tween.start()
+	

@@ -182,9 +182,9 @@
 				<string> "flat" </string>
 				<string> "clip_text" </string>
 				<string> "quit" </string>
-				<string> "_colide_com_barra" </string>
-				<string> "body_enter" </string>
 				<string> "_colide_com_brick" </string>
+				<string> "body_enter" </string>
+				<string> "_colide_com_barra" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 22 </int>
@@ -319,9 +319,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
-							<array  len="8" shared="false">
+							<array  len="10" shared="false">
 								<string> "res://ball.gd" </string>
 								<string> "res://main.gd" </string>
 								<string> "res://bar.gd" </string>
@@ -330,6 +330,8 @@
 								<string> "res://sound_fx.gd" </string>
 								<string> "res://song.gd" </string>
 								<string> "res://green-brick.gd" </string>
+								<string> "res://resume.gd" </string>
+								<string> "res://quit_button.gd" </string>
 							</array>
 						</dictionary>
 					</dictionary>

@@ -20,7 +20,7 @@ func _ready():
 	var posicao = get_pos()
 	var random = 0.5 + randf()
 	
-	tween.interpolate_method(self, "set_pos", Vector2(posicao.x, posicao.y + 100), self.get_pos(), random, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	tween.interpolate_method(self, "set_pos", Vector2(posicao.x, posicao.y - 100), self.get_pos(), random, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	
 	tween.set_repeat(false)
 	tween.start()
