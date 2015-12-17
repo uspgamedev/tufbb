@@ -18,6 +18,7 @@ var combo = 0
 var cont = 0
 var vel
 var cont2 = 0
+var cont3 = 0
 
 func _ready():
 	set_fixed_process(true)
@@ -110,6 +111,7 @@ func _colide_com_brick (body):
 	
 	if (body.get_type() != "KinematicBody2D"):
 		cont += 1
+		cont3 = 0
 	
 	if (body.get_filename() == "res://green-brick.xscn" or body.get_filename() == "res://yellow-brick.xscn" or body.get_filename() == "res://red-brick.xscn"
 		or body.get_filename() == "res://moving-brick.xscn" or body.get_filename() == "res://ghost-brick.xscn"):
@@ -152,13 +154,15 @@ func _colide_com_barra(body):
 	if (baixo < bar.baixo):
 		if (body.get_type() == "KinematicBody2D"):
 			cont = 0
-			if (vel.y < 500):
-				if ((vel.x > 0 and bar.deltavel > 0) or (vel.x < 0 and bar.deltavel < 0)):
-					set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -1.2*vel.y))
+			cont3 += 1
+			if (cont3 < 2):
+				if (vel.y < 500):
+					if ((vel.x > 0 and bar.deltavel > 0) or (vel.x < 0 and bar.deltavel < 0)):
+						set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -1.2*vel.y))
+					else:
+						set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -vel.y))
 				else:
-					set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -vel.y))
-			else:
-				if ((vel.x > 0 and bar.deltavel > 0) or (vel.x < 0 and bar.deltavel < 0)):
-					set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -vel.y))
-				else:
-					set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -0.8*vel.y))
+					if ((vel.x > 0 and bar.deltavel > 0) or (vel.x < 0 and bar.deltavel < 0)):
+						set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -vel.y))
+					else:
+						set_linear_velocity(Vector2(vel.x + coef*bar.deltavel, -0.8*vel.y))
