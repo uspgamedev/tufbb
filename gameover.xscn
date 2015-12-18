@@ -220,9 +220,9 @@
 				<bool> False </bool>
 				<string> "Game Over&#000a;&#000a;Score:&#000a;&#000a;&#000a;&#000a;Press &apos;Space&apos; to play again." </string>
 				<real> -1 </real>
-				<real> 400 </real>
+				<real> 330 </real>
 				<real> 270 </real>
-				<real> 450 </real>
+				<real> 460 </real>
 				<real> 306 </real>
 				<string> "" </string>
 				<resource  resource_type="Script" path="res://game_over_score.gd">  </resource>

@@ -73,7 +73,7 @@
 				<resource  resource_type="Script" path="res://congratulations.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -196,7 +196,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="7" shared="false">
 								<string> "res://gameover.gd" </string>
@@ -227,9 +227,9 @@
 				<bool> False </bool>
 				<string> "CONGRATULATIONS!&#000a;&#000a;Final Score:&#000a;&#000a;&#000a;&#000a;" </string>
 				<real> -1 </real>
-				<real> 400 </real>
+				<real> 280 </real>
 				<real> 270 </real>
-				<real> 450 </real>
+				<real> 510 </real>
 				<real> 306 </real>
 				<string> "" </string>
 				<resource  resource_type="Script" path="res://game_over_score.gd">  </resource>
